@@ -282,7 +282,13 @@
   .signature{font-family:'Lalezar',cursive;font-size:1.6rem;color:var(--joy);}
   .contact{margin-top:60px;color:var(--text-dim);font-size:.95rem;}
   .contact a{color:var(--molaheze);text-decoration:none;}
-  footer{text-align:center;padding:40px 20px;color:#5b6294;font-size:.8rem;}
+  footer{text-align:center;padding:38px 20px 42px;color:#5b6294;font-size:.8rem;border-top:1px solid rgba(255,255,255,.06);}
+  .footer-partners{max-width:760px;margin:0 auto 26px;display:flex;align-items:center;justify-content:center;gap:34px;flex-wrap:wrap;}
+  .footer-partners img{display:block;width:auto;max-width:150px;height:42px;object-fit:contain;opacity:.72;transition:opacity .2s ease;}
+  .footer-partners img.divoolee{height:52px;}
+  .footer-partners img.fidibo{height:48px;}
+  .footer-partners img:hover{opacity:1;}
+  .footer-copy{letter-spacing:.02em;}
 
   /* ---------- LANGUAGE + MUSIC CONTROLS ---------- */
   .site-controls{
@@ -303,17 +309,23 @@
   .music-btn{min-width:112px;color:var(--text);border-color:var(--panel-line);}
   .music-btn.playing{color:#071022;background:var(--joy);}
 
-  /* ---------- PARTNERSHIP CAPABILITIES ---------- */
-  .partner-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:40px;}
+  /* ---------- PROJECT PARTNERS ---------- */
+  .partner-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px;}
   .partner-card{
     background:linear-gradient(145deg,rgba(45,212,197,.11),rgba(74,144,217,.05));
-    border:1px solid var(--panel-line);border-radius:20px;padding:28px;
+    border:1px solid var(--panel-line);border-radius:20px;padding:18px;text-align:center;
+    display:flex;flex-direction:column;align-items:center;
   }
-  .partner-card h3{font-size:1.5rem;color:var(--molaheze);margin-bottom:10px;}
-  .partner-card p{color:#d4d8f2;font-size:.95rem;}
-  .partner-card ul{list-style:none;margin-top:18px;display:flex;flex-direction:column;gap:10px;}
-  .partner-card li{position:relative;padding-right:20px;color:var(--text-dim);font-size:.9rem;}
-  .partner-card li::before{content:"✦";position:absolute;right:0;color:var(--joy);}
+  .partner-logo-stage{width:100%;height:180px;display:flex;align-items:center;justify-content:center;background:#f7f8fa;border-radius:15px;padding:22px;margin-bottom:20px;overflow:hidden;}
+  .partner-logo-stage img{display:block;max-width:100%;max-height:128px;object-fit:contain;filter:grayscale(1);opacity:.82;mix-blend-mode:multiply;}
+  .partner-card.shahrzad .partner-logo-stage{background:#f7f8fa;}
+  .partner-card.shahrzad .partner-logo-stage img{max-height:150px;}
+  .partner-card h3{font-size:1.42rem;color:var(--text);margin-bottom:9px;}
+  .partner-role{display:inline-flex;align-items:center;justify-content:center;min-height:30px;padding:5px 12px;margin-bottom:12px;border:1px solid rgba(45,212,197,.28);border-radius:999px;color:var(--joy);font-size:.76rem;font-weight:800;}
+  .partner-card p{color:#d4d8f2;font-size:.93rem;line-height:1.9;margin:0;}
+  .sponsor-brief{margin:28px 0 34px;padding:22px 24px;border:1px solid rgba(45,212,197,.24);border-radius:18px;background:linear-gradient(135deg,rgba(45,212,197,.1),rgba(74,144,217,.06));}
+  .sponsor-brief strong{display:block;color:var(--joy);font-size:1.05rem;margin-bottom:8px;}
+  .sponsor-brief p{color:#d4d8f2;line-height:2;margin:0;}
 
   /* ---------- DESIGN DEVELOPMENT GALLERIES ---------- */
   .gallery-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:42px;}
@@ -349,6 +361,10 @@
   html[dir="ltr"] .tl-item::before{right:auto;left:-32px;}
   html[dir="ltr"] .pkg-card li,html[dir="ltr"] .partner-card li{padding-right:0;padding-left:20px;}
   html[dir="ltr"] .pkg-card li::before,html[dir="ltr"] .partner-card li::before{right:auto;left:0;}
+
+  @media(max-width:1000px){
+    .partner-grid{grid-template-columns:repeat(2,1fr);}
+  }
 
   @media(max-width:640px){
     .legacy-grid{grid-template-columns:1fr;}
@@ -480,35 +496,38 @@
   </div>
 </section>
 
-<!-- STRATEGIC PARTNERSHIP CAPABILITIES -->
+<!-- PROJECT PARTNERS -->
 <section class="block">
   <div class="wrap reveal">
-    <div class="kicker">ظرفیت‌های همکاری تجاری و رسانه‌ای</div>
-    <h2 class="title">از سالن نمایش تا اکوسیستم دیجیتال</h2>
-    <p class="lead">هم‌زمانی ظرفیت‌های پردیس تئاتر شهرزاد، فیدیبو آرت و دیجی‌کالا می‌تواند مسیر معرفی، تبلیغات و فروش بلیت نمایش را به یک تجربه یکپارچه برای مخاطب خانواده تبدیل کند.</p>
+    <div class="kicker">پارتنرهای پروژه</div>
+    <h2 class="title">چهار همراه، یک مسیر مشترک</h2>
+    <p class="lead">از تولید اثر و میزبانی اجرای زنده تا فروش بلیت و دسترسی دیجیتال، این چهار مجموعه حلقه‌های اصلی شکل‌گیری پروژه و ارتباط آن با مخاطب را می‌سازند.</p>
     <div class="partner-grid">
       <div class="partner-card">
-        <h3>فیدیبو آرت</h3>
-        <p>ظرفیت بالقوه برای اتصال نمایش به شبکه تبلیغاتی، فروش بلیت و مخاطبان فرهنگی پردیس تئاتر شهرزاد.</p>
-        <ul>
-          <li>عرضه و معرفی نمایش در بستر فروش بلیت</li>
-          <li>کمپین‌های دیجیتال و محتوای مشترک</li>
-          <li>تبلیغات محیطی و استرابوردهای شهری</li>
-          <li>فعالیت‌های تبلیغاتی در فضای پردیس شهرزاد</li>
-        </ul>
+        <div class="partner-logo-stage"><img src="assets/partners/divoolee.png" alt="لوگوی کمپانی دیوولی"></div>
+        <h3>کمپانی دیوولی</h3>
+        <div class="partner-role">تولیدکننده نمایش</div>
+        <p>کمپانی تئاتر موزیکال فانتزی دیوولی، مجموعه خالق و تولیدکننده نمایش‌های این مسیر و مسئول شکل‌گیری اجرایی پروژه است.</p>
+      </div>
+      <div class="partner-card shahrzad">
+        <div class="partner-logo-stage"><img src="assets/partners/shahrzad.png" alt="لوگوی پردیس تئاتر شهرزاد"></div>
+        <h3>پردیس تئاتر شهرزاد</h3>
+        <div class="partner-role">میزبان اجرای نمایش</div>
+        <p>سالن شماره ۲ پردیس تئاتر شهرزاد، خانه اجرای تهران و بستر اصلی تجربه زنده این پروژه است.</p>
       </div>
       <div class="partner-card">
+        <div class="partner-logo-stage"><img src="assets/partners/fidibo.svg" alt="لوگوی فیدیبو"></div>
+        <h3>فیدیبو</h3>
+        <div class="partner-role">سامانه فروش بلیت</div>
+        <p>بستر فروش بلیت و ارتباط دیجیتال با مخاطبان نمایش در مسیر معرفی و دسترسی به اجرا.</p>
+      </div>
+      <div class="partner-card">
+        <div class="partner-logo-stage"><img src="assets/partners/digikala.png" alt="لوگوی دیجی‌کالا"></div>
         <h3>دیجی‌کالا</h3>
-        <p>ظرفیت بالقوه برای دسترسی به جامعه گسترده کاربران و معرفی نمایش در یکی از پربازدیدترین بسترهای آنلاین کشور.</p>
-        <ul>
-          <li>ظرفیت معرفی و فروش بلیت در بستر دیجی‌کالا</li>
-          <li>امکان حضور در جایگاه‌های منتخب تبلیغاتی</li>
-          <li>طراحی کمپین، کد تخفیف و پیشنهاد مشترک</li>
-          <li>دسترسی هدفمند به خانواده‌ها و خریداران آنلاین</li>
-        </ul>
+        <div class="partner-role">پارتنر دسترسی دیجیتال</div>
+        <p>ظرفیتی گسترده برای معرفی نمایش و دسترسی مستقیم به خانواده‌ها و مخاطبان آنلاین در سراسر ایران.</p>
       </div>
     </div>
-    <p class="body-p" style="margin-top:24px">اجرای هر یک از این ظرفیت‌ها منوط به مذاکره، تأیید و عقد توافق نهایی با مجموعه‌های مربوط است و در قرارداد اسپانسر به‌صورت شفاف تعیین خواهد شد.</p>
   </div>
 </section>
 
@@ -716,6 +735,11 @@
     <h2 class="title">سه سطح همکاری برای برندها</h2>
     <p class="lead">فرصتی برای حضور هدفمند برند در تجربه‌ای خانوادگی، فرهنگی و سرگرم‌کننده — نه فقط درج یک لوگو.</p>
 
+    <div class="sponsor-brief">
+      <strong>ماهیت همکاری با حامی مالی</strong>
+      <p>مبالغ این بسته‌ها در ازای مجموعه‌ای از خدمات تبلیغاتی، رسانه‌ای و فرصت‌های دیده‌شدن برند پرداخت می‌شوند؛ این همکاری سرمایه‌گذاری، مشارکت در فروش یا تسهیلات قابل‌استرداد نیست و وجهی به اسپانسر بازگردانده نمی‌شود. دامنه دقیق خدمات و جایگاه‌های تبلیغاتی هر برند در قرارداد نهایی مشخص خواهد شد.</p>
+    </div>
+
     <div class="pkg-grid">
       <div class="pkg-card gold">
         <div class="pkg-label">بسته طلایی</div>
@@ -782,7 +806,15 @@
   </div>
 </section>
 
-<footer>درون بیرون: فرمان گمشده — خلاصه اختصاصی برای شرکای تجاری</footer>
+<footer>
+  <div class="footer-partners" aria-label="پارتنرهای پروژه">
+    <img class="divoolee" src="assets/partners/footer/divoolee-white.png" alt="دیوولی">
+    <img src="assets/partners/footer/shahrzad-white.png" alt="پردیس تئاتر شهرزاد">
+    <img class="fidibo" src="assets/partners/footer/fidibo-white.png" alt="فیدیبو">
+    <img src="assets/partners/footer/digikala-white.png" alt="دیجی‌کالا">
+  </div>
+  <div class="footer-copy">درون بیرون: فرمان گمشده — خلاصه اختصاصی برای شرکای تجاری</div>
+</footer>
 
 <script>
   // Bilingual interface — Persian is the default language.
@@ -814,11 +846,18 @@
     'طراحی صحنه و مهندسی ساخت':'SCENIC DESIGN & FABRICATION','اتاق فرمان، از کانسپت تا نقشه اجرایی':'THE CONTROL ROOM: FROM CONCEPT TO BUILD DRAWINGS','دکور نمایش برای یک اجرای تک‌لوکیشن طراحی شده است: میز فرمان نورگذر با نورپردازی LED قابل‌کنترل، بدنه سفید، فرم منحنی و ساختار ماژولار برای جابه‌جایی و تور.':'The set is designed for a single-location production: a translucent white control console with programmable LED lighting, a curved profile and a modular structure suitable for transport and touring.','میز کنترل مرکزی':'CENTRAL CONTROL CONSOLE','مدل‌سازی سه‌بعدی، نقشه‌های اندازه‌گذاری‌شده و جزئیات ساخت برای هماهنگی مستقیم با تیم دکور و اجرای دقیق در سالن.':'3D visualization, dimensioned drawings and fabrication details provide a precise working reference for the scenic construction team.','عرض 3000 mm':'WIDTH 3000 mm','ارتفاع 1200 mm':'HEIGHT 1200 mm','نورپردازی RGB LED':'RGB LED LIGHTING','نقشه نمای روبه‌رو':'FRONT ELEVATION','ابعاد و تناسبات اجرایی':'Production dimensions and proportions','جزئیات ساخت':'FABRICATION DETAILS','مرجع تیم سازنده دکور':'Reference for the scenic workshop',
     'پشتوانه پروژه':'TRACK RECORD','سومین گام یک مسیر آزموده‌شده':'THE THIRD STEP IN A PROVEN JOURNEY','فرمان گمشده روی سابقه دو نمایش پرمخاطب قبلی امین گلستانه ساخته می‌شود.':'The Lost Control builds upon Amin Golestaneh’s two previous audience successes.','هتل ترانسیلوانیا؛ شعبه ایران':'Hotel Transylvania: Iran Branch','کارخانه هیولاها؛ سالیوان در ایران':'Monsters, Inc.: Sullivan in Iran','پرفروش‌ترین نمایش تاریخ تئاتر کودک ایران':'Iran’s best-selling children’s theatre production','تعداد اجرا':'PERFORMANCES','بیش از ۱۵۰ سانس سولد اوت':'Over 150 sold-out performances','مخاطبان':'AUDIENCE','۷۰ هزار نفر در سراسر ایران':'70,000 across Iran','فروش ناخالص':'GROSS SALES','۱۰ میلیارد تومان':'IRR equivalent of 10 billion tomans','بازتاب رسانه‌ای':'MEDIA COVERAGE','بیش از ۵۰ مصاحبه و گزارش، پوشش دویچه‌وله':'50+ interviews and reports, including Deutsche Welle','۷۰ سانس در ۲ دوره':'70 performances across 2 runs','۸ هزار نفر':'8,000','۳٫۸ میلیارد تومان':'3.8 billion tomans','ظرفیت اشغال سالن':'OCCUPANCY','بالای ۷۵٪':'Over 75%','بازتاب':'COVERAGE','پوشش ۱۵ دقیقه‌ای شبکه خبر':'15-minute national news coverage',
     'اجرا و توسعه جغرافیایی':'PERFORMANCE & TOURING','از تهران تا تور شهرستان‌ها':'FROM TEHRAN TO A NATIONAL TOUR','اجرای اصلی در پردیس تئاتر شهرزاد، سالن شماره ۲ برگزار می‌شود. طراحی تک‌لوکیشن و دکور ماژولار، اجرا در شهرهای مختلف را امکان‌پذیر می‌کند.':'The premiere is planned for Hall 2 at Shahrzad Theatre Complex. Its single-location, modular design makes touring to other cities possible.','شهرهایی که پیش از آغاز اجرای تهران، اعلام آمادگی برای میزبانی کرده‌اند:':'Cities that have expressed early interest in hosting the production:','کرج':'KARAJ','ساری':'SARI','شیراز':'SHIRAZ','مشهد':'MASHHAD','اصفهان':'ISFAHAN','رشت':'RASHT','تبریز':'TABRIZ','اهواز':'AHVAZ','قم':'QOM','کیش':'KISH',
-    'ظرفیت‌های همکاری تجاری و رسانه‌ای':'COMMERCIAL & MEDIA PARTNERSHIP POTENTIAL','از سالن نمایش تا اکوسیستم دیجیتال':'FROM THE THEATRE TO THE DIGITAL ECOSYSTEM','هم‌زمانی ظرفیت‌های پردیس تئاتر شهرزاد، فیدیبو آرت و دیجی‌کالا می‌تواند مسیر معرفی، تبلیغات و فروش بلیت نمایش را به یک تجربه یکپارچه برای مخاطب خانواده تبدیل کند.':'The combined potential of Shahrzad Theatre Complex, Fidibo Art and Digikala can create an integrated discovery, promotion and ticketing journey for family audiences.','فیدیبو آرت':'FIDIBO ART','ظرفیت بالقوه برای اتصال نمایش به شبکه تبلیغاتی، فروش بلیت و مخاطبان فرهنگی پردیس تئاتر شهرزاد.':'Potential access to ticketing, promotional channels and the cultural audience of Shahrzad Theatre Complex.','عرضه و معرفی نمایش در بستر فروش بلیت':'Showcase and ticket sales through the platform','کمپین‌های دیجیتال و محتوای مشترک':'Digital campaigns and co-created content','تبلیغات محیطی و استرابوردهای شهری':'Outdoor advertising and city straboards','فعالیت‌های تبلیغاتی در فضای پردیس شهرزاد':'On-site promotion at Shahrzad Theatre Complex','دیجی‌کالا':'DIGIKALA','ظرفیت بالقوه برای دسترسی به جامعه گسترده کاربران و معرفی نمایش در یکی از پربازدیدترین بسترهای آنلاین کشور.':'Potential access to a large digital audience through one of Iran’s most visited online platforms.','ظرفیت معرفی و فروش بلیت در بستر دیجی‌کالا':'Potential presentation and ticket sales on Digikala','امکان حضور در جایگاه‌های منتخب تبلیغاتی':'Selected digital advertising placements','طراحی کمپین، کد تخفیف و پیشنهاد مشترک':'Joint campaigns, discount codes and special offers','دسترسی هدفمند به خانواده‌ها و خریداران آنلاین':'Targeted access to families and online shoppers','اجرای هر یک از این ظرفیت‌ها منوط به مذاکره، تأیید و عقد توافق نهایی با مجموعه‌های مربوط است و در قرارداد اسپانسر به‌صورت شفاف تعیین خواهد شد.':'Each opportunity is subject to negotiation, approval and a final agreement with the relevant platform, and will be clearly defined in the sponsorship contract.',
+    'پارتنرهای پروژه':'PROJECT PARTNERS','سه همراه، یک مسیر مشترک':'THREE PARTNERS, ONE SHARED JOURNEY','از میزبانی اجرای زنده تا فروش بلیت و دسترسی دیجیتال، این سه مجموعه حلقه‌های اصلی ارتباط پروژه با مخاطب را شکل می‌دهند.':'From the live venue to ticketing and digital reach, these three partners form the project’s core connection with its audience.','پردیس تئاتر شهرزاد':'SHAHRZAD THEATRE COMPLEX','میزبان اجرای نمایش':'PERFORMANCE VENUE','سالن شماره ۲ پردیس تئاتر شهرزاد، خانه اجرای تهران و بستر اصلی تجربه زنده این پروژه است.':'Hall 2 at Shahrzad Theatre Complex is the project’s Tehran home and the primary setting for its live audience experience.','فیدیبو':'FIDIBO','سامانه فروش بلیت':'TICKETING PLATFORM','بستر فروش بلیت و ارتباط دیجیتال با مخاطبان نمایش در مسیر معرفی و دسترسی به اجرا.':'The show’s ticketing and digital audience platform, supporting discovery and access to performances.','دیجی‌کالا':'DIGIKALA','پارتنر دسترسی دیجیتال':'DIGITAL REACH PARTNER','ظرفیتی گسترده برای معرفی نمایش و دسترسی مستقیم به خانواده‌ها و مخاطبان آنلاین در سراسر ایران.':'A broad platform for introducing the production and reaching families and online audiences across Iran.',
     'برنامه تبلیغات و روابط عمومی':'ADVERTISING & PR','مسیر معرفی نمایش به مخاطب':'THE AUDIENCE JOURNEY','۶ تا ۸ هفته پیش از افتتاحیه':'6–8 WEEKS BEFORE OPENING','ایجاد کنجکاوی':'BUILD CURIOSITY','گوی‌های رنگی احساسات، تصاویر محدود از میز فرمان، شمارش معکوس تا رونمایی؛ بدون افشای کامل داستان.':'Color-coded emotion orbs, glimpses of the control desk and a countdown—without revealing the full story.','۴ تا ۶ هفته پیش از افتتاحیه':'4–6 WEEKS BEFORE OPENING','رونمایی شخصیت‌ها':'CHARACTER REVEALS','هر شخصیت به‌صورت مستقل معرفی می‌شود: شادی، خشم، انزجار، ترس، ملاحظه خانم و در پایان، رونمایی بازیگر نقش غم.':'Each character is introduced separately, ending with the reveal of the actor playing Sadness.','۳ تا ۴ هفته پیش از افتتاحیه':'3–4 WEEKS BEFORE OPENING','آغاز فروش':'TICKET SALES LAUNCH','پوستر و تیزر رسمی، فعال‌شدن سامانه فروش بلیت، پیش‌فروش محدود و فروش گروهی مدارس و سازمان‌ها.':'Official poster and trailer, ticketing launch, limited presale and group sales for schools and organizations.','روز اجرا':'OPENING DAY','افتتاحیه':'PREMIERE EVENT','رویدادی رسانه‌ای با حضور هنرمندان، رسانه‌ها و اینفلوئنسرهای خانوادگی؛ استیج عکاسی اختصاصی و نمایش هویت بصری اسپانسر.':'A media event with artists, press and family influencers, featuring a dedicated photo stage and sponsor branding.','در طول اجرا':'DURING THE RUN','حفظ فروش':'SUSTAIN MOMENTUM','واکنش کودکان و والدین، پشت‌صحنه، گزارش سانس‌های پرفروش و اعلام تمدید یا سانس‌های تازه.':'Audience reactions, behind-the-scenes content, high-demand performance updates and extension announcements.','پس از تهران':'AFTER TEHRAN','تور شهرستان‌ها':'NATIONAL TOUR','کمپینی کوتاه و مستقل برای هر شهر، با تیزر اختصاصی، رسانه‌های محلی و افتتاحیه کوچک شهری.':'A focused campaign for each city with a tailored trailer, local media and a city premiere.',
     'بسته‌های اسپانسرینگ':'SPONSORSHIP PACKAGES','سه سطح همکاری برای برندها':'THREE LEVELS OF BRAND PARTNERSHIP','فرصتی برای حضور هدفمند برند در تجربه‌ای خانوادگی، فرهنگی و سرگرم‌کننده — نه فقط درج یک لوگو.':'A meaningful brand presence within a family, cultural and entertainment experience—not merely a logo placement.','بسته طلایی':'GOLD PACKAGE','حامی اصلی و انحصاری':'MAIN & EXCLUSIVE SPONSOR','۵٬۰۰۰٬۰۰۰٬۰۰۰ تومان':'5,000,000,000 TOMANS','عنوان «حامی اصلی نمایش» و انحصار صنفی':'Main Sponsor title and category exclusivity','حضور در تهران و تمام شهرهای تور':'Presence in Tehran and confirmed tour cities','برندینگ اصلی استیج عکاسی':'Primary branding on the photo stage','تا ۴ محتوای ویدئویی مشترک اختصاصی':'Up to 4 bespoke co-branded videos','۳۰۰ بلیت سازمانی':'300 corporate tickets','گزارش تفصیلی کامل کمپین':'Comprehensive campaign report','بسته نقره‌ای':'SILVER PACKAGE','حامی ویژه تهران':'SPECIAL TEHRAN SPONSOR','۲٬۰۰۰٬۰۰۰٬۰۰۰ تومان':'2,000,000,000 TOMANS','عنوان «حامی ویژه نمایش»':'Special Sponsor title','لوگو در پوستر، وب‌سایت و بک‌دراپ افتتاحیه':'Logo on poster, website and premiere backdrop','جایگاه ثانویه در استیج عکاسی':'Secondary placement on the photo stage','تا ۲ محتوای مشترک':'Up to 2 co-branded content pieces','۱۰۰ بلیت سازمانی':'100 corporate tickets','حضور در تور با توافق جداگانه':'Tour presence by separate agreement','بسته برنزی':'BRONZE PACKAGE','حامی همراه':'SUPPORTING SPONSOR','۵۰۰٬۰۰۰٬۰۰۰ تومان':'500,000,000 TOMANS','عنوان «حامی همراه»':'Supporting Sponsor title','لوگو در صفحه حامیان وب‌سایت و بک‌دراپ مشترک':'Logo on sponsor page and shared backdrop','استند در فضای سالن':'Display stand in the venue','دعوت به افتتاحیه':'Premiere invitation','۳۰ بلیت سازمانی':'30 corporate tickets','گزارش کلی پایان دوره اجرا':'End-of-run summary report','پرداخت هر بسته در سه مرحله انجام می‌شود: ۷۰٪ هم‌زمان با عقد قرارداد، ۲۰٪ حداکثر ۱۰ روز پیش از افتتاحیه، و ۱۰٪ حداکثر ۷ روز پس از افتتاحیه. جایگاه بسته طلایی تنها به یک برند تعلق می‌گیرد.':'Each package is paid in three stages: 70% upon signing, 20% no later than 10 days before opening, and 10% no later than 7 days after opening. The Gold position is reserved for one brand only.',
     'سخن پایانی':'FINAL WORD','من ایران را در چشم‌های کودکانی می‌بینم که هنوز می‌توانند جهان را از نو تصور کنند.':'I see Iran in the eyes of children who can still imagine the world anew.','تخیل برای کودک، فرار از واقعیت نیست؛ نخستین تمرین او برای تغییر واقعیت است.':'For a child, imagination is not an escape from reality; it is the first rehearsal for changing it.','آرزوی من ساختن جهانی کوچک روی صحنه است که فرزندان ایران در آن احساس امنیت کنند و باور کنند آینده هنوز می‌تواند زیبا باشد.':'My wish is to create a small world on stage where the children of Iran feel safe and believe that the future can still be beautiful.','برای گفت‌وگو درباره همکاری و دریافت نسخه اختصاصی پیشنهاد اسپانسرینگ، آماده برگزاری جلسه حضوری یا آنلاین هستیم.':'We are available for an in-person or online meeting to discuss partnership opportunities and a tailored sponsorship proposal.','تماس: ۰۹۱۲۸۹۲۵۷۳۸  –  ۰۹۳۳۳۴۲۵۵۱۱':'CONTACT: +98 912 892 5738  –  +98 933 342 5511','ایمیل:':'EMAIL:','اینستاگرام:':'INSTAGRAM:','درون بیرون: فرمان گمشده — خلاصه اختصاصی برای شرکای تجاری':'INSIDE OUT: THE LOST CONTROL — A PRIVATE OVERVIEW FOR COMMERCIAL PARTNERS'
   }));
+  en.set('ماهیت همکاری با حامی مالی','THE NATURE OF SPONSORSHIP');
+  en.set('مبالغ این بسته‌ها در ازای مجموعه‌ای از خدمات تبلیغاتی، رسانه‌ای و فرصت‌های دیده‌شدن برند پرداخت می‌شوند؛ این همکاری سرمایه‌گذاری، مشارکت در فروش یا تسهیلات قابل‌استرداد نیست و وجهی به اسپانسر بازگردانده نمی‌شود. دامنه دقیق خدمات و جایگاه‌های تبلیغاتی هر برند در قرارداد نهایی مشخص خواهد شد.','Package fees are paid in exchange for advertising, media services and brand-visibility opportunities. This arrangement is not an investment, revenue-sharing agreement or refundable facility, and no payment is returned to the sponsor. The exact scope of services and placements will be defined in the final agreement.');
+  en.set('چهار همراه، یک مسیر مشترک','FOUR PARTNERS, ONE SHARED JOURNEY');
+  en.set('از تولید اثر و میزبانی اجرای زنده تا فروش بلیت و دسترسی دیجیتال، این چهار مجموعه حلقه‌های اصلی شکل‌گیری پروژه و ارتباط آن با مخاطب را می‌سازند.','From production and live performance to ticketing and digital reach, these four partners form the project’s core delivery and audience journey.');
+  en.set('کمپانی دیوولی','DIVOOLEE COMPANY');
+  en.set('تولیدکننده نمایش','PRODUCTION COMPANY');
+  en.set('کمپانی تئاتر موزیکال فانتزی دیوولی، مجموعه خالق و تولیدکننده نمایش‌های این مسیر و مسئول شکل‌گیری اجرایی پروژه است.','Divoolee Fantasy Musical Theater Company is the creative production company behind this body of work and the team responsible for bringing the project to the stage.');
   const textNodes=[];
   const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode(node){
     return node.parentElement && !['SCRIPT','STYLE','AUDIO'].includes(node.parentElement.tagName) && node.nodeValue.trim() ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
