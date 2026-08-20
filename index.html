@@ -240,6 +240,8 @@
     border:1px solid var(--panel-line);
     font-size:.95rem;
   }
+  .city-chip.confirmed{display:inline-flex;align-items:center;gap:9px;padding:11px 18px;background:linear-gradient(135deg,rgba(49,211,126,.22),rgba(45,212,197,.13));border-color:rgba(65,230,144,.58);color:#f1fff7;font-weight:800;box-shadow:0 0 0 1px rgba(65,230,144,.08) inset,0 8px 24px rgba(25,170,100,.12);}
+  .verify-badge{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:#35d57f;color:#07140d;font-size:12px;font-weight:1000;line-height:1;box-shadow:0 0 10px rgba(53,213,127,.55);}
   .city-chip.future{opacity:.6;font-size:.85rem;}
 
   /* ---------- CAMPAIGN TIMELINE ---------- */
@@ -284,10 +286,17 @@
   .contact a{color:var(--molaheze);text-decoration:none;}
   footer{text-align:center;padding:38px 20px 42px;color:#5b6294;font-size:.8rem;border-top:1px solid rgba(255,255,255,.06);}
   .footer-partners{max-width:760px;margin:0 auto 26px;display:flex;align-items:center;justify-content:center;gap:34px;flex-wrap:wrap;}
-  .footer-partners img{display:block;width:auto;max-width:150px;height:42px;object-fit:contain;opacity:.72;transition:opacity .2s ease;}
+  .footer-partners img{display:block;width:auto;max-width:150px;height:42px;object-fit:contain;opacity:.72;cursor:pointer;user-select:none;-webkit-user-drag:none;transform:translateY(0) scale(1);filter:drop-shadow(0 0 0 rgba(255,255,255,0));transition:opacity .28s ease,transform .28s ease,filter .28s ease;}
   .footer-partners img.divoolee{height:52px;}
   .footer-partners img.fidibo{height:48px;}
-  .footer-partners img:hover{opacity:1;}
+  .footer-partners img:hover{opacity:1;transform:translateY(-4px) scale(1.055);filter:drop-shadow(0 0 7px rgba(255,255,255,.7)) drop-shadow(0 0 18px rgba(45,212,197,.38));}
+  .footer-partners img:active{opacity:1;transform:scale(.96);}
+  .footer-partners img.logo-pulse{animation:footerLogoPulse .7s ease-out;}
+  @keyframes footerLogoPulse{
+    0%{opacity:1;transform:scale(.96);filter:drop-shadow(0 0 4px rgba(255,255,255,.8));}
+    45%{opacity:1;transform:translateY(-3px) scale(1.1);filter:drop-shadow(0 0 12px rgba(255,255,255,1)) drop-shadow(0 0 28px rgba(45,212,197,.85));}
+    100%{opacity:.72;transform:translateY(0) scale(1);filter:drop-shadow(0 0 0 rgba(255,255,255,0));}
+  }
   .footer-copy{letter-spacing:.02em;}
 
   /* ---------- LANGUAGE + MUSIC CONTROLS ---------- */
@@ -513,7 +522,7 @@
         <div class="partner-logo-stage"><img src="assets/partners/shahrzad.png" alt="لوگوی پردیس تئاتر شهرزاد"></div>
         <h3>پردیس تئاتر شهرزاد</h3>
         <div class="partner-role">میزبان اجرای نمایش</div>
-        <p>سالن شماره ۱ پردیس تئاتر شهرزاد، خانه اجرای تهران و بستر اصلی تجربه زنده این پروژه است.</p>
+        <p>سالن شماره ۲ پردیس تئاتر شهرزاد، خانه اجرای تهران و بستر اصلی تجربه زنده این پروژه است.</p>
       </div>
       <div class="partner-card">
         <div class="partner-logo-stage"><img src="assets/partners/fidibo.svg" alt="لوگوی فیدیبو"></div>
@@ -593,7 +602,7 @@
         <div class="char-orb"></div>
         <div>
           <h3>ملاحظه خانم</h3>
-          <div class="actor">فهیمه شایانفر — شخصیت تازه و اختصاصی اقتباس ایرانی</div>
+          <div class="actor">فهیمه شایان‌فر — شخصیت تازه و اختصاصی اقتباس ایرانی</div>
           <p>مؤدب، آرام و ظاهراً خیرخواه؛ اما وقتی کنترل اتاق فرمان را در دست می‌گیرد، باران دیگر نمی‌تواند خواسته واقعی خود را تشخیص دهد.</p>
           <span class="status">نقش قطعی</span>
         </div>
@@ -674,9 +683,9 @@
     <p class="lead">اجرای اصلی در <b>پردیس تئاتر شهرزاد، سالن شماره ۲</b> برگزار می‌شود. طراحی تک‌لوکیشن و دکور ماژولار، اجرا در شهرهای مختلف را امکان‌پذیر می‌کند.</p>
     <p class="body-p">شهرهایی که پیش از آغاز اجرای تهران، اعلام آمادگی برای میزبانی کرده‌اند:</p>
     <div class="city-row">
-      <div class="city-chip">کرج</div>
-      <div class="city-chip">ساری</div>
-      <div class="city-chip">شیراز</div>
+      <div class="city-chip confirmed"><span class="verify-badge" aria-hidden="true">✓</span>کرج</div>
+      <div class="city-chip confirmed"><span class="verify-badge" aria-hidden="true">✓</span>ساری</div>
+      <div class="city-chip confirmed"><span class="verify-badge" aria-hidden="true">✓</span>شیراز</div>
       <div class="city-chip future">مشهد</div>
       <div class="city-chip future">اصفهان</div>
       <div class="city-chip future">رشت</div>
@@ -808,10 +817,10 @@
 
 <footer>
   <div class="footer-partners" aria-label="پارتنرهای پروژه">
-    <img class="divoolee" src="assets/partners/footer/divoolee-white.png" alt="دیوولی">
-    <img src="assets/partners/footer/shahrzad-white.png" alt="پردیس تئاتر شهرزاد">
-    <img class="fidibo" src="assets/partners/footer/fidibo-white.png" alt="فیدیبو">
-    <img src="assets/partners/footer/digikala-white.png" alt="دیجی‌کالا">
+    <img class="divoolee" src="assets/partners/footer/divoolee-white.png" alt="دیوولی" draggable="false">
+    <img src="assets/partners/footer/shahrzad-white.png" alt="پردیس تئاتر شهرزاد" draggable="false">
+    <img class="fidibo" src="assets/partners/footer/fidibo-white.png" alt="فیدیبو" draggable="false">
+    <img src="assets/partners/footer/digikala-white.png" alt="دیجی‌کالا" draggable="false">
   </div>
   <div class="footer-copy">درون بیرون: فرمان گمشده — خلاصه اختصاصی برای شرکای تجاری</div>
 </footer>
@@ -858,6 +867,7 @@
   en.set('کمپانی دیوولی','DIVOOLEE COMPANY');
   en.set('تولیدکننده نمایش','PRODUCTION COMPANY');
   en.set('کمپانی تئاتر موزیکال فانتزی دیوولی، مجموعه خالق و تولیدکننده نمایش‌های این مسیر و مسئول شکل‌گیری اجرایی پروژه است.','Divoolee Fantasy Musical Theater Company is the creative production company behind this body of work and the team responsible for bringing the project to the stage.');
+  en.set('فهیمه شایان‌فر — شخصیت تازه و اختصاصی اقتباس ایرانی','Fahimeh Shayanfar — an original character created for the Iranian adaptation');
   const textNodes=[];
   const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode(node){
     return node.parentElement && !['SCRIPT','STYLE','AUDIO'].includes(node.parentElement.tagName) && node.nodeValue.trim() ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
@@ -912,6 +922,16 @@
     });
   }, {threshold:.15});
   revealEls.forEach(el=>io.observe(el));
+
+  // Footer partner logos: luminous feedback for mouse and touch, without image dragging.
+  document.querySelectorAll('.footer-partners img').forEach(logo=>{
+    logo.addEventListener('pointerdown',()=>{
+      logo.classList.remove('logo-pulse');
+      void logo.offsetWidth;
+      logo.classList.add('logo-pulse');
+    });
+    logo.addEventListener('animationend',()=>logo.classList.remove('logo-pulse'));
+  });
 
   // Floating magical orbs
   const field = document.getElementById('orb-field');
