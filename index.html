@@ -195,6 +195,16 @@
   }
   .source-link:hover{color:#fff;border-color:#fff;}
 
+  /* ---------- MEDIA POWER ---------- */
+  .media-proof{margin-top:34px;padding:18px 22px;border:1px solid rgba(45,212,197,.28);border-radius:18px;background:linear-gradient(115deg,rgba(45,212,197,.13),rgba(74,144,217,.06));color:#dce5f3;line-height:1.9;}
+  .media-proof strong{color:var(--joy);font-size:1.12rem;}
+  .media-power-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px;}
+  .media-power-card{position:relative;min-height:205px;padding:24px 20px;border:1px solid var(--panel-line);border-radius:18px;background:var(--panel);overflow:hidden;}
+  .media-power-card::after{content:"";position:absolute;width:90px;height:90px;left:-38px;bottom:-44px;border-radius:50%;background:var(--molaheze);filter:blur(42px);opacity:.12;}
+  .media-index{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;margin-bottom:18px;border-radius:10px;background:rgba(45,212,197,.12);color:var(--molaheze);font-size:.72rem;font-weight:900;}
+  .media-power-card h3{font-size:1.08rem;color:#fff;margin-bottom:10px;}
+  .media-power-card p{color:var(--text-dim);font-size:.88rem;line-height:1.9;}
+
   /* ---------- ANIMATION REFERENCE ---------- */
   .reference-layout{
     display:grid;grid-template-columns:minmax(230px,340px) 1fr;
@@ -373,6 +383,7 @@
 
   @media(max-width:1000px){
     .partner-grid{grid-template-columns:repeat(2,1fr);}
+    .media-power-grid{grid-template-columns:repeat(2,1fr);}
   }
 
   @media(max-width:640px){
@@ -386,6 +397,7 @@
     .char-orb{width:52px;height:52px;}
     section.block{padding:80px 0;}
     .partner-grid{grid-template-columns:1fr;}
+    .media-power-grid{grid-template-columns:1fr;}
     .gallery-grid{grid-template-columns:1fr;}
     .decor-caption{grid-template-columns:1fr;}
     .spec-chips{justify-content:flex-start;}
@@ -522,7 +534,7 @@
         <div class="partner-logo-stage"><img src="assets/partners/shahrzad.png" alt="لوگوی پردیس تئاتر شهرزاد"></div>
         <h3>پردیس تئاتر شهرزاد</h3>
         <div class="partner-role">میزبان اجرای نمایش</div>
-        <p>سالن شماره ۱ پردیس تئاتر شهرزاد، خانه اجرای تهران و بستر اصلی تجربه زنده این پروژه است.</p>
+        <p>سالن شماره ۲ پردیس تئاتر شهرزاد، خانه اجرای تهران و بستر اصلی تجربه زنده این پروژه است.</p>
       </div>
       <div class="partner-card">
         <div class="partner-logo-stage"><img src="assets/partners/fidibo.svg" alt="لوگوی فیدیبو"></div>
@@ -671,6 +683,22 @@
         <div class="stat-row" style="border:none"><span>بازتاب</span><b>پوشش ۱۵ دقیقه‌ای شبکه خبر</b></div>
         <a class="source-link" href="https://fa.wikipedia.org/wiki/%DA%A9%D8%A7%D8%B1%D8%AE%D8%A7%D9%86%D9%87_%D9%87%DB%8C%D9%88%D9%84%D8%A7%D9%87%D8%A7_%D8%B3%D8%A7%D9%84%DB%8C%D9%88%D8%A7%D9%86_%D8%AF%D8%B1_%D8%A7%DB%8C%D8%B1%D8%A7%D9%86" target="_blank" rel="noopener">صفحه نمایش «کارخانه هیولاها؛ سالیوان در ایران» در ویکی‌پدیا ↗</a>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- MEDIA POWER -->
+<section class="block">
+  <div class="wrap reveal">
+    <div class="kicker">قدرت رسانه‌ای پروژه</div>
+    <h2 class="title">رسانه، امتداد طبیعی این نمایش است</h2>
+    <p class="lead">سابقه پیگیری رسانه‌ها از آثار پیشین امین گلستانه، حضور صداپیشگان شناخته‌شده و ماهیت تصویری و خانوادگی پروژه، «فرمان گمشده» را به سوژه‌ای آماده برای خبر، گفت‌وگو و گزارش تبدیل می‌کند.</p>
+    <div class="media-proof"><strong>سابقه قابل استناد:</strong> بیش از ۵۰ مصاحبه و گزارش برای «هتل ترانسیلوانیا؛ شعبه ایران»، بازتاب در دویچه‌وله و گزارش ۱۵ دقیقه‌ای شبکه خبر از «کارخانه هیولاها؛ سالیوان در ایران».</div>
+    <div class="media-power-grid">
+      <article class="media-power-card"><span class="media-index">۰۱</span><h3>خبرگزاری‌های رسمی</h3><p>انتشار خبرهای مرحله‌ای از معرفی پروژه و بازیگران تا آغاز فروش، افتتاحیه، استقبال مخاطبان و تور شهرها.</p></article>
+      <article class="media-power-card"><span class="media-index">۰۲</span><h3>مصاحبه‌های اختصاصی</h3><p>گفت‌وگو با نویسنده و کارگردان، تهیه‌کننده و صداپیشگان درباره اقتباس ایرانی، تولید و تجربه اجرای زنده.</p></article>
+      <article class="media-power-card"><span class="media-index">۰۳</span><h3>نقد و گفت‌وگوی تخصصی</h3><p>ظرفیت دعوت از منتقدان تئاتر، کارشناسان کودک و رسانه‌های فرهنگی برای بررسی کیفیت هنری و مفاهیم اثر.</p></article>
+      <article class="media-power-card"><span class="media-index">۰۴</span><h3>شبکه‌های خبری و تصویری</h3><p>سوژه‌های تصویری متنوع از گریم و لباس تا میز فرمان، پشت‌صحنه، تمرین موسیقی و واکنش کودکان و خانواده‌ها.</p></article>
     </div>
   </div>
 </section>
@@ -868,6 +896,20 @@
   en.set('تولیدکننده نمایش','PRODUCTION COMPANY');
   en.set('کمپانی تئاتر موزیکال فانتزی دیوولی، مجموعه خالق و تولیدکننده نمایش‌های این مسیر و مسئول شکل‌گیری اجرایی پروژه است.','Divoolee Fantasy Musical Theater Company is the creative production company behind this body of work and the team responsible for bringing the project to the stage.');
   en.set('فهیمه شایان‌فر — شخصیت تازه و اختصاصی اقتباس ایرانی','Fahimeh Shayanfar — an original character created for the Iranian adaptation');
+  en.set('قدرت رسانه‌ای پروژه','PROJECT MEDIA POWER');
+  en.set('۰۱','01');en.set('۰۲','02');en.set('۰۳','03');en.set('۰۴','04');
+  en.set('رسانه، امتداد طبیعی این نمایش است','MEDIA IS A NATURAL EXTENSION OF THIS PRODUCTION');
+  en.set('سابقه پیگیری رسانه‌ها از آثار پیشین امین گلستانه، حضور صداپیشگان شناخته‌شده و ماهیت تصویری و خانوادگی پروژه، «فرمان گمشده» را به سوژه‌ای آماده برای خبر، گفت‌وگو و گزارش تبدیل می‌کند.','The media record of Amin Golestaneh’s previous productions, the presence of recognized voice actors, and the project’s visual, family-oriented nature make The Lost Control a strong subject for news, interviews and feature coverage.');
+  en.set('سابقه قابل استناد:','DOCUMENTED TRACK RECORD:');
+  en.set('بیش از ۵۰ مصاحبه و گزارش برای «هتل ترانسیلوانیا؛ شعبه ایران»، بازتاب در دویچه‌وله و گزارش ۱۵ دقیقه‌ای شبکه خبر از «کارخانه هیولاها؛ سالیوان در ایران».','More than 50 interviews and reports for Hotel Transylvania: Iran Branch, coverage by Deutsche Welle, and a 15-minute national news feature on Monsters, Inc.: Sullivan in Iran.');
+  en.set('خبرگزاری‌های رسمی','OFFICIAL NEWS AGENCIES');
+  en.set('انتشار خبرهای مرحله‌ای از معرفی پروژه و بازیگران تا آغاز فروش، افتتاحیه، استقبال مخاطبان و تور شهرها.','A staged news cycle spanning the project and cast reveal, ticket launch, premiere, audience reception and city tour.');
+  en.set('مصاحبه‌های اختصاصی','EXCLUSIVE INTERVIEWS');
+  en.set('گفت‌وگو با نویسنده و کارگردان، تهیه‌کننده و صداپیشگان درباره اقتباس ایرانی، تولید و تجربه اجرای زنده.','Interviews with the writer-director, producer and voice actors about the Iranian adaptation, production process and live experience.');
+  en.set('نقد و گفت‌وگوی تخصصی','CRITICAL & EXPERT COVERAGE');
+  en.set('ظرفیت دعوت از منتقدان تئاتر، کارشناسان کودک و رسانه‌های فرهنگی برای بررسی کیفیت هنری و مفاهیم اثر.','Opportunities to engage theatre critics, child-development specialists and cultural media in discussing the work’s artistic quality and themes.');
+  en.set('شبکه‌های خبری و تصویری','NEWS & BROADCAST MEDIA');
+  en.set('سوژه‌های تصویری متنوع از گریم و لباس تا میز فرمان، پشت‌صحنه، تمرین موسیقی و واکنش کودکان و خانواده‌ها.','A rich range of visual stories—from makeup, costumes and the control console to backstage access, music rehearsals and family reactions.');
   const textNodes=[];
   const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode(node){
     return node.parentElement && !['SCRIPT','STYLE','AUDIO'].includes(node.parentElement.tagName) && node.nodeValue.trim() ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
