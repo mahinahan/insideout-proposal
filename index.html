@@ -254,6 +254,38 @@
   .verify-badge{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:#35d57f;color:#07140d;font-size:12px;font-weight:1000;line-height:1;box-shadow:0 0 10px rgba(53,213,127,.55);}
   .city-chip.future{opacity:.6;font-size:.85rem;}
 
+  /* ---------- CONTROL ROOM SHOWREEL ---------- */
+  .showreel-console{
+    margin-top:42px;padding:22px;border-radius:38px;
+    background:linear-gradient(145deg,#eef7fb 0%,#c6e6f3 42%,#87c7df 100%);
+    border:2px solid rgba(255,255,255,.84);
+    box-shadow:0 28px 70px rgba(0,0,0,.36),0 0 40px rgba(45,212,197,.14),inset 0 0 28px rgba(255,255,255,.74);
+    color:#10213c;position:relative;overflow:hidden;
+  }
+  .showreel-console::before,.showreel-console::after{content:"";position:absolute;top:24px;width:9px;height:calc(100% - 48px);border-radius:99px;background:linear-gradient(180deg,var(--joy),var(--molaheze),var(--fear));box-shadow:0 0 18px currentColor;opacity:.75;}
+  .showreel-console::before{right:12px}.showreel-console::after{left:12px}
+  .showreel-screen{
+    position:relative;background:#050919;border:8px solid #f6fbff;border-radius:29px 29px 18px 18px;overflow:hidden;
+    box-shadow:inset 0 0 0 2px #7bbfd7,inset 0 0 55px rgba(45,212,197,.14),0 15px 35px rgba(14,43,71,.28);
+  }
+  .showreel-screen video{display:block;width:100%;aspect-ratio:16/9;background:radial-gradient(circle at 50% 40%,#172b56,#050919 70%);object-fit:contain;}
+  .showreel-empty{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:28px;color:#dceeff;background:radial-gradient(circle at 50% 35%,rgba(40,90,145,.5),rgba(5,9,25,.96) 72%);pointer-events:none;}
+  .showreel-empty.hidden{display:none}.showreel-empty .memory-orb{width:76px;height:76px;border-radius:50%;margin-bottom:16px;background:radial-gradient(circle at 33% 28%,#fff 0 5%,#63eff0 7%,#14a7cd 38%,#173d88 72%);box-shadow:0 0 25px #2dd4c5,0 0 70px rgba(45,212,197,.46);}
+  .showreel-empty strong{font-size:1.18rem}.showreel-empty span{font-size:.82rem;opacity:.72;margin-top:7px;direction:ltr}
+  .showreel-deck{margin-top:16px;padding:16px 18px;border-radius:18px 18px 28px 28px;background:linear-gradient(180deg,#f8fcff,#dceef5);border:1px solid rgba(70,133,163,.36);box-shadow:inset 0 -8px 18px rgba(67,137,168,.16);}
+  .showreel-readout{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:0 4px 13px;border-bottom:1px solid rgba(23,64,88,.16);}
+  .showreel-now{font-weight:900;color:#102746}.showreel-counter{font:800 .78rem/1 'Arial',sans-serif;color:#0d6680;background:#bceef0;border-radius:99px;padding:7px 11px;direction:ltr;}
+  .transport{display:flex;align-items:center;justify-content:center;gap:11px;padding:15px 0 4px;}
+  .transport-btn{width:48px;height:42px;border:0;border-radius:13px;background:#15375c;color:#fff;cursor:pointer;font-size:1rem;box-shadow:0 5px 0 #0a1c32,0 9px 18px rgba(9,28,50,.2);transition:.18s ease;}
+  .transport-btn.primary{width:60px;background:linear-gradient(180deg,#ffdb52,#e6aa18);color:#3b2a00;box-shadow:0 5px 0 #9a6500,0 9px 20px rgba(143,89,0,.25);}
+  .transport-btn:hover{transform:translateY(-2px);filter:brightness(1.08)}.transport-btn:active{transform:translateY(3px);box-shadow:0 2px 0 #0a1c32;}
+  .showreel-lights{display:flex;justify-content:center;gap:9px;margin-top:13px}.showreel-lights i{width:9px;height:9px;border-radius:50%;background:var(--c);box-shadow:0 0 10px var(--c);}
+  .showreel-playlist{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px;}
+  .clip-button{border:1px solid rgba(45,93,120,.25);border-radius:15px;background:rgba(255,255,255,.72);padding:13px 14px;color:#14334f;text-align:right;cursor:pointer;font-family:inherit;transition:.2s ease;}
+  .clip-button:hover,.clip-button.active{background:#163d65;color:#fff;border-color:#2dd4c5;box-shadow:0 0 18px rgba(45,212,197,.34);transform:translateY(-2px)}
+  .clip-button small{display:block;font:700 .68rem/1.3 Arial,sans-serif;opacity:.58;margin-bottom:6px;direction:ltr}.clip-button b{font-size:.86rem;line-height:1.7;}
+  .showreel-help{margin-top:18px;color:#526d7c;font-size:.78rem;text-align:center;direction:ltr;}
+
   /* ---------- CAMPAIGN TIMELINE ---------- */
   .timeline{margin-top:44px;border-right:2px solid var(--panel-line);padding-right:26px;display:flex;flex-direction:column;gap:34px;}
   .tl-item{position:relative;}
@@ -380,6 +412,7 @@
   html[dir="ltr"] .tl-item::before{right:auto;left:-32px;}
   html[dir="ltr"] .pkg-card li,html[dir="ltr"] .partner-card li{padding-right:0;padding-left:20px;}
   html[dir="ltr"] .pkg-card li::before,html[dir="ltr"] .partner-card li::before{right:auto;left:0;}
+  html[dir="ltr"] .clip-button{text-align:left;}
 
   @media(max-width:1000px){
     .partner-grid{grid-template-columns:repeat(2,1fr);}
@@ -403,6 +436,7 @@
     .spec-chips{justify-content:flex-start;}
     .site-controls{top:10px;left:10px;right:10px;justify-content:center;}
     .music-btn{min-width:104px;}
+    .showreel-console{padding:13px;border-radius:24px}.showreel-screen{border-width:5px;border-radius:20px 20px 12px 12px}.showreel-playlist{grid-template-columns:1fr 1fr}.showreel-readout{align-items:flex-start;flex-direction:column;gap:8px}.showreel-help{font-size:.7rem;word-break:break-all;}
   }
   @media (prefers-reduced-motion: reduce){
     .orb,.btn-dot,.scrolldown .arrow{animation:none;}
@@ -687,6 +721,49 @@
   </div>
 </section>
 
+<!-- PERFORMANCE SHOWREEL -->
+<section class="block showreel-section">
+  <div class="wrap reveal">
+    <div class="kicker">نمونه اجراهای پیشین</div>
+    <h2 class="title">تصویر واقعی جهان انیمیشن‌ها روی صحنه</h2>
+    <p class="lead">منتخبی از اجراهای پیشین برای آشنایی اسپانسر با مقیاس تولید، استقبال مخاطبان، طراحی صحنه، لباس و کیفیت تجربه زنده.</p>
+
+    <div class="showreel-console" id="showreel-console">
+      <div class="showreel-screen">
+        <video id="showreel-video" controls playsinline preload="metadata" aria-label="ویدیو نمونه اجرا"></video>
+        <div class="showreel-empty" id="showreel-empty">
+          <div class="memory-orb" aria-hidden="true"></div>
+          <strong>کلیپ‌های نمونه اجرا</strong>
+          <span id="showreel-file-hint">assets/videos/showreel-01.mp4</span>
+        </div>
+      </div>
+
+      <div class="showreel-deck">
+        <div class="showreel-readout">
+          <div class="showreel-now" id="showreel-now">هتل ترانسیلوانیا؛ لحظات منتخب اجرا</div>
+          <div class="showreel-counter" id="showreel-counter">01 / 04</div>
+        </div>
+        <div class="transport" aria-label="کنترل پخش کلیپ‌ها">
+          <button class="transport-btn" id="showreel-prev" type="button" aria-label="کلیپ قبلی">▶|</button>
+          <button class="transport-btn primary" id="showreel-play" type="button" aria-label="پخش یا توقف">▶</button>
+          <button class="transport-btn" id="showreel-next" type="button" aria-label="کلیپ بعدی">|▶</button>
+        </div>
+        <div class="showreel-lights" aria-hidden="true">
+          <i style="--c:var(--joy)"></i><i style="--c:var(--sadness)"></i><i style="--c:var(--anger)"></i><i style="--c:var(--disgust)"></i><i style="--c:var(--fear)"></i><i style="--c:var(--molaheze)"></i>
+        </div>
+      </div>
+
+      <div class="showreel-playlist" id="showreel-playlist">
+        <button class="clip-button active" type="button" data-clip="0"><small>SHOWREEL 01</small><b>هتل ترانسیلوانیا؛ لحظات منتخب اجرا</b></button>
+        <button class="clip-button" type="button" data-clip="1"><small>SHOWREEL 02</small><b>کارخانه هیولاها؛ لحظات منتخب اجرا</b></button>
+        <button class="clip-button" type="button" data-clip="2"><small>SHOWREEL 03</small><b>واکنش کودکان و خانواده‌ها</b></button>
+        <button class="clip-button" type="button" data-clip="3"><small>SHOWREEL 04</small><b>پشت صحنه، موسیقی و طراحی تولید</b></button>
+      </div>
+      <div class="showreel-help">VIDEO FOLDER: assets/videos/ &nbsp;•&nbsp; showreel-01.mp4 → showreel-04.mp4</div>
+    </div>
+  </div>
+</section>
+
 <!-- MEDIA POWER -->
 <section class="block">
   <div class="wrap reveal">
@@ -785,8 +862,13 @@
         <ul>
           <li>عنوان «حامی اصلی نمایش» و انحصار صنفی</li>
           <li>حضور در تهران و تمام شهرهای تور</li>
+          <li>استرابورد در سطح شهر تهران (تبلیغات محیطی)</li>
           <li>برندینگ اصلی استیج عکاسی</li>
           <li>تا ۴ محتوای ویدئویی مشترک اختصاصی</li>
+          <li>پوش‌نوتیفیکیشن برای ۱۲ میلیون کاربر در اپلیکیشن فیدیبو</li>
+          <li>حداقل ۱۰ میلیون بازدید رسانه‌ای و فضای مجازی</li>
+          <li>صفحه اختصاصی خرید بلیت با لوگوی اسپانسر</li>
+          <li>درج لوگوی اسپانسر ویژه روی بلیت‌ها</li>
           <li>۳۰۰ بلیت سازمانی</li>
           <li>گزارش تفصیلی کامل کمپین</li>
         </ul>
@@ -798,6 +880,8 @@
         <ul>
           <li>عنوان «حامی ویژه نمایش»</li>
           <li>لوگو در پوستر، وب‌سایت و بک‌دراپ افتتاحیه</li>
+          <li>استرابورد در سطح شهر تهران (تبلیغات محیطی)</li>
+          <li>حداقل ۲ میلیون بازدید رسانه‌ای و فضای مجازی</li>
           <li>جایگاه ثانویه در استیج عکاسی</li>
           <li>تا ۲ محتوای مشترک</li>
           <li>۱۰۰ بلیت سازمانی</li>
@@ -811,6 +895,7 @@
         <ul>
           <li>عنوان «حامی همراه»</li>
           <li>لوگو در صفحه حامیان وب‌سایت و بک‌دراپ مشترک</li>
+          <li>استرابورد در سطح شهر تهران (تبلیغات محیطی)</li>
           <li>استند در فضای سالن</li>
           <li>دعوت به افتتاحیه</li>
           <li>۳۰ بلیت سازمانی</li>
@@ -885,7 +970,7 @@
     'اجرا و توسعه جغرافیایی':'PERFORMANCE & TOURING','از تهران تا تور شهرستان‌ها':'FROM TEHRAN TO A NATIONAL TOUR','اجرای اصلی در پردیس تئاتر شهرزاد، سالن شماره ۲ برگزار می‌شود. طراحی تک‌لوکیشن و دکور ماژولار، اجرا در شهرهای مختلف را امکان‌پذیر می‌کند.':'The premiere is planned for Hall 2 at Shahrzad Theatre Complex. Its single-location, modular design makes touring to other cities possible.','شهرهایی که پیش از آغاز اجرای تهران، اعلام آمادگی برای میزبانی کرده‌اند:':'Cities that have expressed early interest in hosting the production:','کرج':'KARAJ','ساری':'SARI','شیراز':'SHIRAZ','مشهد':'MASHHAD','اصفهان':'ISFAHAN','رشت':'RASHT','تبریز':'TABRIZ','اهواز':'AHVAZ','قم':'QOM','کیش':'KISH',
     'پارتنرهای پروژه':'PROJECT PARTNERS','سه همراه، یک مسیر مشترک':'THREE PARTNERS, ONE SHARED JOURNEY','از میزبانی اجرای زنده تا فروش بلیت و دسترسی دیجیتال، این سه مجموعه حلقه‌های اصلی ارتباط پروژه با مخاطب را شکل می‌دهند.':'From the live venue to ticketing and digital reach, these three partners form the project’s core connection with its audience.','پردیس تئاتر شهرزاد':'SHAHRZAD THEATRE COMPLEX','میزبان اجرای نمایش':'PERFORMANCE VENUE','سالن شماره ۲ پردیس تئاتر شهرزاد، خانه اجرای تهران و بستر اصلی تجربه زنده این پروژه است.':'Hall 2 at Shahrzad Theatre Complex is the project’s Tehran home and the primary setting for its live audience experience.','فیدیبو':'FIDIBO','سامانه فروش بلیت':'TICKETING PLATFORM','بستر فروش بلیت و ارتباط دیجیتال با مخاطبان نمایش در مسیر معرفی و دسترسی به اجرا.':'The show’s ticketing and digital audience platform, supporting discovery and access to performances.','دیجی‌کالا':'DIGIKALA','پارتنر دسترسی دیجیتال':'DIGITAL REACH PARTNER','ظرفیتی گسترده برای معرفی نمایش و دسترسی مستقیم به خانواده‌ها و مخاطبان آنلاین در سراسر ایران.':'A broad platform for introducing the production and reaching families and online audiences across Iran.',
     'برنامه تبلیغات و روابط عمومی':'ADVERTISING & PR','مسیر معرفی نمایش به مخاطب':'THE AUDIENCE JOURNEY','۶ تا ۸ هفته پیش از افتتاحیه':'6–8 WEEKS BEFORE OPENING','ایجاد کنجکاوی':'BUILD CURIOSITY','گوی‌های رنگی احساسات، تصاویر محدود از میز فرمان، شمارش معکوس تا رونمایی؛ بدون افشای کامل داستان.':'Color-coded emotion orbs, glimpses of the control desk and a countdown—without revealing the full story.','۴ تا ۶ هفته پیش از افتتاحیه':'4–6 WEEKS BEFORE OPENING','رونمایی شخصیت‌ها':'CHARACTER REVEALS','هر شخصیت به‌صورت مستقل معرفی می‌شود: شادی، خشم، انزجار، ترس، ملاحظه خانم و در پایان، رونمایی بازیگر نقش غم.':'Each character is introduced separately, ending with the reveal of the actor playing Sadness.','۳ تا ۴ هفته پیش از افتتاحیه':'3–4 WEEKS BEFORE OPENING','آغاز فروش':'TICKET SALES LAUNCH','پوستر و تیزر رسمی، فعال‌شدن سامانه فروش بلیت، پیش‌فروش محدود و فروش گروهی مدارس و سازمان‌ها.':'Official poster and trailer, ticketing launch, limited presale and group sales for schools and organizations.','روز اجرا':'OPENING DAY','افتتاحیه':'PREMIERE EVENT','رویدادی رسانه‌ای با حضور هنرمندان، رسانه‌ها و اینفلوئنسرهای خانوادگی؛ استیج عکاسی اختصاصی و نمایش هویت بصری اسپانسر.':'A media event with artists, press and family influencers, featuring a dedicated photo stage and sponsor branding.','در طول اجرا':'DURING THE RUN','حفظ فروش':'SUSTAIN MOMENTUM','واکنش کودکان و والدین، پشت‌صحنه، گزارش سانس‌های پرفروش و اعلام تمدید یا سانس‌های تازه.':'Audience reactions, behind-the-scenes content, high-demand performance updates and extension announcements.','پس از تهران':'AFTER TEHRAN','تور شهرستان‌ها':'NATIONAL TOUR','کمپینی کوتاه و مستقل برای هر شهر، با تیزر اختصاصی، رسانه‌های محلی و افتتاحیه کوچک شهری.':'A focused campaign for each city with a tailored trailer, local media and a city premiere.',
-    'بسته‌های اسپانسرینگ':'SPONSORSHIP PACKAGES','سه سطح همکاری برای برندها':'THREE LEVELS OF BRAND PARTNERSHIP','فرصتی برای حضور هدفمند برند در تجربه‌ای خانوادگی، فرهنگی و سرگرم‌کننده — نه فقط درج یک لوگو.':'A meaningful brand presence within a family, cultural and entertainment experience—not merely a logo placement.','بسته طلایی':'GOLD PACKAGE','حامی اصلی و انحصاری':'MAIN & EXCLUSIVE SPONSOR','۵٬۰۰۰٬۰۰۰٬۰۰۰ تومان':'5,000,000,000 TOMANS','عنوان «حامی اصلی نمایش» و انحصار صنفی':'Main Sponsor title and category exclusivity','حضور در تهران و تمام شهرهای تور':'Presence in Tehran and confirmed tour cities','برندینگ اصلی استیج عکاسی':'Primary branding on the photo stage','تا ۴ محتوای ویدئویی مشترک اختصاصی':'Up to 4 bespoke co-branded videos','۳۰۰ بلیت سازمانی':'300 corporate tickets','گزارش تفصیلی کامل کمپین':'Comprehensive campaign report','بسته نقره‌ای':'SILVER PACKAGE','حامی ویژه تهران':'SPECIAL TEHRAN SPONSOR','۲٬۰۰۰٬۰۰۰٬۰۰۰ تومان':'2,000,000,000 TOMANS','عنوان «حامی ویژه نمایش»':'Special Sponsor title','لوگو در پوستر، وب‌سایت و بک‌دراپ افتتاحیه':'Logo on poster, website and premiere backdrop','جایگاه ثانویه در استیج عکاسی':'Secondary placement on the photo stage','تا ۲ محتوای مشترک':'Up to 2 co-branded content pieces','۱۰۰ بلیت سازمانی':'100 corporate tickets','حضور در تور با توافق جداگانه':'Tour presence by separate agreement','بسته برنزی':'BRONZE PACKAGE','حامی همراه':'SUPPORTING SPONSOR','۵۰۰٬۰۰۰٬۰۰۰ تومان':'500,000,000 TOMANS','عنوان «حامی همراه»':'Supporting Sponsor title','لوگو در صفحه حامیان وب‌سایت و بک‌دراپ مشترک':'Logo on sponsor page and shared backdrop','استند در فضای سالن':'Display stand in the venue','دعوت به افتتاحیه':'Premiere invitation','۳۰ بلیت سازمانی':'30 corporate tickets','گزارش کلی پایان دوره اجرا':'End-of-run summary report','پرداخت هر بسته در سه مرحله انجام می‌شود: ۷۰٪ هم‌زمان با عقد قرارداد، ۲۰٪ حداکثر ۱۰ روز پیش از افتتاحیه، و ۱۰٪ حداکثر ۷ روز پس از افتتاحیه. جایگاه بسته طلایی تنها به یک برند تعلق می‌گیرد.':'Each package is paid in three stages: 70% upon signing, 20% no later than 10 days before opening, and 10% no later than 7 days after opening. The Gold position is reserved for one brand only.',
+    'بسته‌های اسپانسرینگ':'SPONSORSHIP PACKAGES','سه سطح همکاری برای برندها':'THREE LEVELS OF BRAND PARTNERSHIP','فرصتی برای حضور هدفمند برند در تجربه‌ای خانوادگی، فرهنگی و سرگرم‌کننده — نه فقط درج یک لوگو.':'A meaningful brand presence within a family, cultural and entertainment experience—not merely a logo placement.','بسته طلایی':'GOLD PACKAGE','حامی اصلی و انحصاری':'MAIN & EXCLUSIVE SPONSOR','۵٬۰۰۰٬۰۰۰٬۰۰۰ تومان':'5,000,000,000 TOMANS','عنوان «حامی اصلی نمایش» و انحصار صنفی':'Main Sponsor title and category exclusivity','حضور در تهران و تمام شهرهای تور':'Presence in Tehran and confirmed tour cities','برندینگ اصلی استیج عکاسی':'Primary branding on the photo stage','تا ۴ محتوای ویدئویی مشترک اختصاصی':'Up to 4 bespoke co-branded videos','پوش‌نوتیفیکیشن برای ۱۲ میلیون کاربر در اپلیکیشن فیدیبو':'Push notification to 12 million users through the Fidibo app','حداقل ۱۰ میلیون بازدید رسانه‌ای و فضای مجازی':'A minimum of 10 million media and social views','صفحه اختصاصی خرید بلیت با لوگوی اسپانسر':'Dedicated ticket-purchase page featuring the sponsor logo','درج لوگوی اسپانسر ویژه روی بلیت‌ها':'Featured sponsor logo printed on tickets','۳۰۰ بلیت سازمانی':'300 corporate tickets','گزارش تفصیلی کامل کمپین':'Comprehensive campaign report','بسته نقره‌ای':'SILVER PACKAGE','حامی ویژه تهران':'SPECIAL TEHRAN SPONSOR','۲٬۰۰۰٬۰۰۰٬۰۰۰ تومان':'2,000,000,000 TOMANS','عنوان «حامی ویژه نمایش»':'Special Sponsor title','لوگو در پوستر، وب‌سایت و بک‌دراپ افتتاحیه':'Logo on poster, website and premiere backdrop','جایگاه ثانویه در استیج عکاسی':'Secondary placement on the photo stage','تا ۲ محتوای مشترک':'Up to 2 co-branded content pieces','۱۰۰ بلیت سازمانی':'100 corporate tickets','حضور در تور با توافق جداگانه':'Tour presence by separate agreement','بسته برنزی':'BRONZE PACKAGE','حامی همراه':'SUPPORTING SPONSOR','۵۰۰٬۰۰۰٬۰۰۰ تومان':'500,000,000 TOMANS','عنوان «حامی همراه»':'Supporting Sponsor title','لوگو در صفحه حامیان وب‌سایت و بک‌دراپ مشترک':'Logo on sponsor page and shared backdrop','استند در فضای سالن':'Display stand in the venue','دعوت به افتتاحیه':'Premiere invitation','۳۰ بلیت سازمانی':'30 corporate tickets','گزارش کلی پایان دوره اجرا':'End-of-run summary report','پرداخت هر بسته در سه مرحله انجام می‌شود: ۷۰٪ هم‌زمان با عقد قرارداد، ۲۰٪ حداکثر ۱۰ روز پیش از افتتاحیه، و ۱۰٪ حداکثر ۷ روز پس از افتتاحیه. جایگاه بسته طلایی تنها به یک برند تعلق می‌گیرد.':'Each package is paid in three stages: 70% upon signing, 20% no later than 10 days before opening, and 10% no later than 7 days after opening. The Gold position is reserved for one brand only.',
     'سخن پایانی':'FINAL WORD','من ایران را در چشم‌های کودکانی می‌بینم که هنوز می‌توانند جهان را از نو تصور کنند.':'I see Iran in the eyes of children who can still imagine the world anew.','تخیل برای کودک، فرار از واقعیت نیست؛ نخستین تمرین او برای تغییر واقعیت است.':'For a child, imagination is not an escape from reality; it is the first rehearsal for changing it.','آرزوی من ساختن جهانی کوچک روی صحنه است که فرزندان ایران در آن احساس امنیت کنند و باور کنند آینده هنوز می‌تواند زیبا باشد.':'My wish is to create a small world on stage where the children of Iran feel safe and believe that the future can still be beautiful.','برای گفت‌وگو درباره همکاری و دریافت نسخه اختصاصی پیشنهاد اسپانسرینگ، آماده برگزاری جلسه حضوری یا آنلاین هستیم.':'We are available for an in-person or online meeting to discuss partnership opportunities and a tailored sponsorship proposal.','تماس: ۰۹۱۲۸۹۲۵۷۳۸  –  ۰۹۳۳۳۴۲۵۵۱۱':'CONTACT: +98 912 892 5738  –  +98 933 342 5511','ایمیل:':'EMAIL:','اینستاگرام:':'INSTAGRAM:','درون بیرون: فرمان گمشده — خلاصه اختصاصی برای شرکای تجاری':'INSIDE OUT: THE LOST CONTROL — A PRIVATE OVERVIEW FOR COMMERCIAL PARTNERS'
   }));
   en.set('ماهیت همکاری با حامی مالی','THE NATURE OF SPONSORSHIP');
@@ -897,6 +982,16 @@
   en.set('کمپانی تئاتر موزیکال فانتزی دیوولی، مجموعه خالق و تولیدکننده نمایش‌های این مسیر و مسئول شکل‌گیری اجرایی پروژه است.','Divoolee Fantasy Musical Theater Company is the creative production company behind this body of work and the team responsible for bringing the project to the stage.');
   en.set('فهیمه شایان‌فر — شخصیت تازه و اختصاصی اقتباس ایرانی','Fahimeh Shayanfar — an original character created for the Iranian adaptation');
   en.set('قدرت رسانه‌ای پروژه','PROJECT MEDIA POWER');
+  en.set('استرابورد در سطح شهر تهران (تبلیغات محیطی)','Citywide streetboard advertising across Tehran (outdoor media)');
+  en.set('حداقل ۲ میلیون بازدید رسانه‌ای و فضای مجازی','A minimum of 2 million media and social views');
+  en.set('نمونه اجراهای پیشین','PREVIOUS PRODUCTION SHOWREEL');
+  en.set('تصویر واقعی جهان انیمیشن‌ها روی صحنه','ANIMATION WORLDS, LIVE ON STAGE');
+  en.set('منتخبی از اجراهای پیشین برای آشنایی اسپانسر با مقیاس تولید، استقبال مخاطبان، طراحی صحنه، لباس و کیفیت تجربه زنده.','Selected footage from previous productions, presenting the production scale, audience reception, scenic design, costumes and quality of the live experience.');
+  en.set('کلیپ‌های نمونه اجرا','PERFORMANCE SHOWREEL');
+  en.set('هتل ترانسیلوانیا؛ لحظات منتخب اجرا','Hotel Transylvania: selected live moments');
+  en.set('کارخانه هیولاها؛ لحظات منتخب اجرا','Monsters, Inc.: selected live moments');
+  en.set('واکنش کودکان و خانواده‌ها','Children and family reactions');
+  en.set('پشت صحنه، موسیقی و طراحی تولید','Backstage, music and production design');
   en.set('۰۱','01');en.set('۰۲','02');en.set('۰۳','03');en.set('۰۴','04');
   en.set('رسانه، امتداد طبیعی این نمایش است','MEDIA IS A NATURAL EXTENSION OF THIS PRODUCTION');
   en.set('سابقه پیگیری رسانه‌ها از آثار پیشین امین گلستانه، حضور صداپیشگان شناخته‌شده و ماهیت تصویری و خانوادگی پروژه، «فرمان گمشده» را به سوژه‌ای آماده برای خبر، گفت‌وگو و گزارش تبدیل می‌کند.','The media record of Amin Golestaneh’s previous productions, the presence of recognized voice actors, and the project’s visual, family-oriented nature make The Lost Control a strong subject for news, interviews and feature coverage.');
@@ -910,6 +1005,49 @@
   en.set('ظرفیت دعوت از منتقدان تئاتر، کارشناسان کودک و رسانه‌های فرهنگی برای بررسی کیفیت هنری و مفاهیم اثر.','Opportunities to engage theatre critics, child-development specialists and cultural media in discussing the work’s artistic quality and themes.');
   en.set('شبکه‌های خبری و تصویری','NEWS & BROADCAST MEDIA');
   en.set('سوژه‌های تصویری متنوع از گریم و لباس تا میز فرمان، پشت‌صحنه، تمرین موسیقی و واکنش کودکان و خانواده‌ها.','A rich range of visual stories—from makeup, costumes and the control console to backstage access, music rehearsals and family reactions.');
+
+  // Sequential performance showreel. Keep filenames numbered so clips can play in order.
+  const showreelClips=[
+    {file:'assets/videos/showreel-01.mp4',fa:'هتل ترانسیلوانیا؛ لحظات منتخب اجرا',en:'Hotel Transylvania: selected live moments'},
+    {file:'assets/videos/showreel-02.mp4',fa:'کارخانه هیولاها؛ لحظات منتخب اجرا',en:'Monsters, Inc.: selected live moments'},
+    {file:'assets/videos/showreel-03.mp4',fa:'واکنش کودکان و خانواده‌ها',en:'Children and family reactions'},
+    {file:'assets/videos/showreel-04.mp4',fa:'پشت صحنه، موسیقی و طراحی تولید',en:'Backstage, music and production design'}
+  ];
+  const showreelVideo=document.getElementById('showreel-video');
+  const showreelEmpty=document.getElementById('showreel-empty');
+  const showreelHint=document.getElementById('showreel-file-hint');
+  const showreelNow=document.getElementById('showreel-now');
+  const showreelCounter=document.getElementById('showreel-counter');
+  const showreelPlay=document.getElementById('showreel-play');
+  const showreelButtons=[...document.querySelectorAll('.clip-button')];
+  let currentShowreelClip=0;
+  const renderShowreelMeta=()=>{
+    const clip=showreelClips[currentShowreelClip];
+    const english=document.documentElement.lang==='en';
+    showreelNow.textContent=english?clip.en:clip.fa;
+    showreelCounter.textContent=String(currentShowreelClip+1).padStart(2,'0')+' / '+String(showreelClips.length).padStart(2,'0');
+    showreelHint.textContent=clip.file;
+    showreelButtons.forEach((button,index)=>button.classList.toggle('active',index===currentShowreelClip));
+  };
+  const loadShowreelClip=(index,autoplay=false)=>{
+    currentShowreelClip=(index+showreelClips.length)%showreelClips.length;
+    showreelEmpty.classList.remove('hidden');
+    showreelVideo.src=showreelClips[currentShowreelClip].file;
+    showreelVideo.load();
+    renderShowreelMeta();
+    if(autoplay)showreelVideo.play().catch(()=>{});
+  };
+  showreelButtons.forEach(button=>button.addEventListener('click',()=>loadShowreelClip(Number(button.dataset.clip),true)));
+  document.getElementById('showreel-prev').addEventListener('click',()=>loadShowreelClip(currentShowreelClip-1,true));
+  document.getElementById('showreel-next').addEventListener('click',()=>loadShowreelClip(currentShowreelClip+1,true));
+  showreelPlay.addEventListener('click',()=>showreelVideo.paused?showreelVideo.play().catch(()=>{}):showreelVideo.pause());
+  showreelVideo.addEventListener('canplay',()=>showreelEmpty.classList.add('hidden'));
+  showreelVideo.addEventListener('playing',()=>{showreelEmpty.classList.add('hidden');showreelPlay.textContent='Ⅱ';if(typeof music!=='undefined'&&!music.paused)music.pause();});
+  showreelVideo.addEventListener('pause',()=>showreelPlay.textContent='▶');
+  showreelVideo.addEventListener('ended',()=>loadShowreelClip(currentShowreelClip+1,true));
+  showreelVideo.addEventListener('error',()=>{showreelEmpty.classList.remove('hidden');showreelPlay.textContent='▶';});
+  loadShowreelClip(0,false);
+
   const textNodes=[];
   const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode(node){
     return node.parentElement && !['SCRIPT','STYLE','AUDIO'].includes(node.parentElement.tagName) && node.nodeValue.trim() ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
@@ -926,6 +1064,7 @@
     });
     document.getElementById('lang-fa').classList.toggle('active',!english);
     document.getElementById('lang-en').classList.toggle('active',english);
+    renderShowreelMeta();
     updateMusicLabel();
   };
   document.getElementById('lang-fa').addEventListener('click',()=>setLanguage('fa'));
