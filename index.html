@@ -275,7 +275,7 @@
   .showreel-deck{margin-top:16px;padding:16px 18px;border-radius:18px 18px 28px 28px;background:linear-gradient(180deg,#f8fcff,#dceef5);border:1px solid rgba(70,133,163,.36);box-shadow:inset 0 -8px 18px rgba(67,137,168,.16);}
   .showreel-readout{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:0 4px 13px;border-bottom:1px solid rgba(23,64,88,.16);}
   .showreel-now{font-weight:900;color:#102746}.showreel-counter{font:800 .78rem/1 'Arial',sans-serif;color:#0d6680;background:#bceef0;border-radius:99px;padding:7px 11px;direction:ltr;}
-  .transport{display:flex;align-items:center;justify-content:center;gap:11px;padding:15px 0 4px;}
+  .transport{display:flex;align-items:center;justify-content:center;gap:11px;padding:15px 0 4px;direction:ltr;}
   .transport-btn{width:48px;height:42px;border:0;border-radius:13px;background:#15375c;color:#fff;cursor:pointer;font-size:1rem;box-shadow:0 5px 0 #0a1c32,0 9px 18px rgba(9,28,50,.2);transition:.18s ease;}
   .transport-btn.primary{width:60px;background:linear-gradient(180deg,#ffdb52,#e6aa18);color:#3b2a00;box-shadow:0 5px 0 #9a6500,0 9px 20px rgba(143,89,0,.25);}
   .transport-btn:hover{transform:translateY(-2px);filter:brightness(1.08)}.transport-btn:active{transform:translateY(3px);box-shadow:0 2px 0 #0a1c32;}
@@ -283,8 +283,8 @@
   .showreel-playlist{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px;}
   .clip-button{border:1px solid rgba(45,93,120,.25);border-radius:15px;background:rgba(255,255,255,.72);padding:13px 14px;color:#14334f;text-align:right;cursor:pointer;font-family:inherit;transition:.2s ease;}
   .clip-button:hover,.clip-button.active{background:#163d65;color:#fff;border-color:#2dd4c5;box-shadow:0 0 18px rgba(45,212,197,.34);transform:translateY(-2px)}
-  .clip-button small{display:block;font:700 .68rem/1.3 Arial,sans-serif;opacity:.58;margin-bottom:6px;direction:ltr}.clip-button b{font-size:.86rem;line-height:1.7;}
-  .showreel-help{margin-top:18px;color:#526d7c;font-size:.78rem;text-align:center;direction:ltr;}
+  .clip-button small{display:block;font:700 .72rem/1.3 'Vazirmatn',Arial,sans-serif;opacity:.58;margin-bottom:6px}.clip-button b{font-size:.86rem;line-height:1.7;}
+  .showreel-help{margin-top:18px;color:#526d7c;font-size:.78rem;text-align:center;}
 
   /* ---------- CAMPAIGN TIMELINE ---------- */
   .timeline{margin-top:44px;border-right:2px solid var(--panel-line);padding-right:26px;display:flex;flex-direction:column;gap:34px;}
@@ -744,9 +744,9 @@
           <div class="showreel-counter" id="showreel-counter">01 / 04</div>
         </div>
         <div class="transport" aria-label="کنترل پخش کلیپ‌ها">
-          <button class="transport-btn" id="showreel-prev" type="button" aria-label="کلیپ قبلی">▶|</button>
+          <button class="transport-btn" id="showreel-prev" type="button" aria-label="کلیپ قبلی">◀</button>
           <button class="transport-btn primary" id="showreel-play" type="button" aria-label="پخش یا توقف">▶</button>
-          <button class="transport-btn" id="showreel-next" type="button" aria-label="کلیپ بعدی">|▶</button>
+          <button class="transport-btn" id="showreel-next" type="button" aria-label="کلیپ بعدی">▶</button>
         </div>
         <div class="showreel-lights" aria-hidden="true">
           <i style="--c:var(--joy)"></i><i style="--c:var(--sadness)"></i><i style="--c:var(--anger)"></i><i style="--c:var(--disgust)"></i><i style="--c:var(--fear)"></i><i style="--c:var(--molaheze)"></i>
@@ -759,7 +759,7 @@
         <button class="clip-button" type="button" data-clip="2"><small>کلیپ سوم</small><b>واکنش کودکان و خانواده‌ها</b></button>
         <button class="clip-button" type="button" data-clip="3"><small>کلیپ چهارم</small><b>پشت صحنه، موسیقی و طراحی تولید</b></button>
       </div>
-      <div class="showreel-help">نمونه کلیپ ها برای بررسی پروژه های گذشته لطفا برای پخش صبور باشید ، اطلاعات برخی کلیپ ها به روز نیست</div>
+      <div class="showreel-help">نمونه کلیپ‌ها برای بررسی پروژه‌های گذشته؛ لطفاً برای پخش صبور باشید، اطلاعات برخی کلیپ‌ها به‌روز نیست.</div>
     </div>
   </div>
 </section>
@@ -992,6 +992,11 @@
   en.set('کارخانه هیولاها؛ لحظات منتخب اجرا','Monsters, Inc.: selected live moments');
   en.set('واکنش کودکان و خانواده‌ها','Children and family reactions');
   en.set('پشت صحنه، موسیقی و طراحی تولید','Backstage, music and production design');
+  en.set('کلیپ اول','CLIP ONE');
+  en.set('کلیپ دوم','CLIP TWO');
+  en.set('کلیپ سوم','CLIP THREE');
+  en.set('کلیپ چهارم','CLIP FOUR');
+  en.set('نمونه کلیپ‌ها برای بررسی پروژه‌های گذشته؛ لطفاً برای پخش صبور باشید، اطلاعات برخی کلیپ‌ها به‌روز نیست.','Sample clips from previous projects. Please allow time for playback; some information shown in the clips may no longer be current.');
   en.set('۰۱','01');en.set('۰۲','02');en.set('۰۳','03');en.set('۰۴','04');
   en.set('رسانه، امتداد طبیعی این نمایش است','MEDIA IS A NATURAL EXTENSION OF THIS PRODUCTION');
   en.set('سابقه پیگیری رسانه‌ها از آثار پیشین امین گلستانه، حضور صداپیشگان شناخته‌شده و ماهیت تصویری و خانوادگی پروژه، «فرمان گمشده» را به سوژه‌ای آماده برای خبر، گفت‌وگو و گزارش تبدیل می‌کند.','The media record of Amin Golestaneh’s previous productions, the presence of recognized voice actors, and the project’s visual, family-oriented nature make The Lost Control a strong subject for news, interviews and feature coverage.');
