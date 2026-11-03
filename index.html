@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>درون بیرون: فرمان گمشده</title>
+<title>باکس جهانی انیمیشن روی صحنه | پیشنهاد همکاری یک‌ساله</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&family=Lalezar&display=swap" rel="stylesheet">
 <style>
@@ -406,6 +406,47 @@
   .sponsor-brief strong{display:block;color:var(--joy);font-size:1.05rem;margin-bottom:8px;}
   .sponsor-brief p{color:#d4d8f2;line-height:2;margin:0;}
 
+  /* ---------- THREE-SHOW ANIMATION BOX ---------- */
+  .box-hero-badge{display:inline-flex;align-items:center;gap:10px;margin-top:26px;padding:9px 16px;border:1px solid rgba(232,196,106,.35);border-radius:999px;background:rgba(232,196,106,.08);color:var(--gold);font-size:.82rem;font-weight:800;}
+  .box-hero-badge::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 18px var(--gold);}
+  .project-showcase{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:42px;}
+  .project-showcase-card{position:relative;overflow:hidden;border-radius:24px;border:1px solid var(--panel-line);background:linear-gradient(160deg,rgba(255,255,255,.075),rgba(21,27,63,.96));box-shadow:0 22px 60px rgba(0,0,0,.24);}
+  .project-poster{position:relative;aspect-ratio:2/3;overflow:hidden;background:#0c102a;}
+  .project-poster::after{content:"";position:absolute;inset:42% 0 0;background:linear-gradient(transparent,rgba(10,14,39,.9));pointer-events:none;}
+  .project-poster img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s ease;}
+  .project-showcase-card:hover .project-poster img{transform:scale(1.035);}
+  .project-status{position:absolute;top:14px;right:14px;z-index:2;padding:6px 11px;border-radius:999px;background:rgba(10,14,39,.82);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(10px);font-size:.7rem;font-weight:900;color:#fff;}
+  .project-status.production{color:#091025;background:var(--joy);border-color:var(--joy);}
+  .project-card-copy{padding:22px;}
+  .project-card-copy h3{font-size:1.5rem;line-height:1.45;margin-bottom:8px;color:#fff;}
+  .project-card-copy p{font-size:.88rem;line-height:1.9;color:var(--text-dim);}
+  .project-credit{margin-top:14px;padding-top:13px;border-top:1px solid var(--panel-line);font-size:.75rem!important;color:#dfe3f7!important;}
+  .contract-band{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:34px;}
+  .contract-kpi{padding:18px 14px;text-align:center;border:1px solid rgba(45,212,197,.2);border-radius:18px;background:rgba(45,212,197,.07);}
+  .contract-kpi b{display:block;font-family:'Lalezar',cursive;font-size:1.65rem;color:var(--molaheze);line-height:1.2;}
+  .contract-kpi span{display:block;margin-top:7px;color:var(--text-dim);font-size:.76rem;}
+  .production-gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:180px;gap:12px;margin-top:36px;}
+  .production-gallery a{display:block;overflow:hidden;border-radius:16px;border:1px solid var(--panel-line);background:var(--panel);}
+  .production-gallery a.wide{grid-column:span 2;}
+  .production-gallery a.tall{grid-row:span 2;}
+  .production-gallery img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease,filter .5s ease;}
+  .production-gallery a:hover img{transform:scale(1.04);filter:saturate(1.08);}
+  .gallery-label{display:flex;align-items:center;justify-content:space-between;margin-top:18px;color:var(--text-dim);font-size:.8rem;}
+  .gallery-label strong{color:#fff;font-size:.95rem;}
+  .master-package{position:relative;overflow:hidden;margin-top:38px;padding:38px;border:1px solid rgba(232,196,106,.48);border-radius:28px;background:radial-gradient(circle at 0 0,rgba(232,196,106,.2),transparent 34%),linear-gradient(145deg,rgba(26,33,72,.98),rgba(12,16,43,.98));box-shadow:0 30px 90px rgba(0,0,0,.3),0 0 54px rgba(232,196,106,.09);}
+  .master-package::after{content:"یک سال";position:absolute;left:-22px;top:20px;transform:rotate(-12deg);font-family:'Lalezar',cursive;font-size:5.8rem;color:rgba(255,255,255,.025);pointer-events:none;}
+  .package-head{display:grid;grid-template-columns:1fr auto;gap:26px;align-items:center;padding-bottom:28px;border-bottom:1px solid rgba(232,196,106,.22);}
+  .package-head h3{font-size:2rem;color:var(--gold);}
+  .package-head p{color:var(--text-dim);max-width:560px;}
+  .package-price{text-align:left;white-space:nowrap;}
+  .package-price b{display:block;font-family:'Lalezar',cursive;font-size:clamp(2.5rem,6vw,4.6rem);line-height:1;color:#fff;text-shadow:0 0 32px rgba(232,196,106,.2);}
+  .package-price span{color:var(--gold);font-size:.9rem;font-weight:800;}
+  .benefit-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px 18px;margin-top:28px;}
+  .benefit-item{position:relative;padding:13px 44px 13px 15px;border:1px solid rgba(255,255,255,.08);border-radius:14px;background:rgba(255,255,255,.035);color:#e3e6f6;font-size:.9rem;}
+  .benefit-item::before{content:"✓";position:absolute;right:14px;top:12px;display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:rgba(45,212,197,.14);color:var(--molaheze);font-weight:900;}
+  .custom-design-note{margin-top:24px;padding:18px 20px;border-radius:16px;border:1px solid rgba(45,212,197,.28);background:linear-gradient(100deg,rgba(45,212,197,.12),rgba(155,107,206,.08));color:#dce4f8;}
+  .custom-design-note strong{color:var(--joy);}
+
   /* ---------- DESIGN DEVELOPMENT GALLERIES ---------- */
   .gallery-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:42px;}
   .gallery-card{
@@ -446,6 +487,7 @@
     .partner-grid{grid-template-columns:repeat(2,1fr);}
     .media-power-grid{grid-template-columns:repeat(2,1fr);}
     .tour-report{grid-template-columns:1fr}.sources-grid{grid-template-columns:1fr 1fr}
+    .project-showcase{grid-template-columns:1fr 1fr}.contract-band{grid-template-columns:1fr 1fr}.production-gallery{grid-template-columns:repeat(2,1fr)}
   }
 
   @media(max-width:640px){
@@ -467,6 +509,7 @@
     .music-btn{min-width:104px;}
     .showreel-console{padding:13px;border-radius:24px}.showreel-screen{border-width:5px;border-radius:20px 20px 12px 12px}.showreel-playlist{grid-template-columns:1fr 1fr}.showreel-readout{align-items:flex-start;flex-direction:column;gap:8px}.showreel-help{font-size:.7rem;word-break:normal;}
     .iran-map-card{padding:5px}.map-zoom-controls{top:10px;left:10px;transform:scale(.88);transform-origin:top left}.map-pin-dot{width:13px;height:13px;border-width:2px}.map-pin-name{font-size:.55rem;padding:2px 4px}.map-popover{width:190px;padding:11px}.tour-report-panel{padding:20px}.tour-kpis{grid-template-columns:1fr 1fr}.sources-section{padding:26px 12px 15px}.sources-box{padding:15px 12px}.sources-grid{grid-template-columns:1fr}.source-card{padding:9px}
+    .project-showcase{grid-template-columns:1fr}.production-gallery{grid-template-columns:1fr 1fr;grid-auto-rows:145px}.package-head{grid-template-columns:1fr}.package-price{text-align:right}.benefit-grid{grid-template-columns:1fr}.master-package{padding:26px 20px}.production-gallery a.wide{grid-column:span 2}
   }
   @media (prefers-reduced-motion: reduce){
     .orb,.btn-dot,.scrolldown .arrow,.soldout{animation:none;}
@@ -490,9 +533,10 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="eyebrow">پروپوزال اسپانسرینگ &nbsp;•&nbsp; امین گلستانه</div>
-  <h1>درون بیرون:<br>فرمان گمشده</h1>
-  <p class="tag">یک ماجراجویی کمدی، فانتزی و موزیکال در اتاق فرمان ذهن یک دختر ایرانی — جایی که شادی، غم، خشم، ترس و انزجار برای نجات او باید فرمان را پیدا کنند.</p>
+  <div class="eyebrow">پروپوزال همکاری اختصاصی یک‌ساله &nbsp;•&nbsp; کمپانی نمایشی دیوولی</div>
+  <h1>جهان انیمیشن‌ها<br>روی صحنه تئاتر</h1>
+  <p class="tag">سه نمایش موزیکال، یک هویت مشترک و حداقل ۳۰۰ اجرا در تهران و تور ایران؛ یک باکس اختصاصی برای خانواده‌هایی که می‌خواهند جهان محبوب انیمیشن را زنده روی صحنه تجربه کنند.</p>
+  <div class="box-hero-badge">پردیس تئاتر شهرزاد — سالن شماره ۱</div>
   <div class="desk">
     <div class="btn-dot" style="background:var(--joy);--glow:var(--joy)">شادی</div>
     <div class="btn-dot" style="background:var(--sadness);--glow:var(--sadness)">غم</div>
@@ -504,19 +548,64 @@
   <div class="scrolldown"><span>پیمایش کنید</span><div class="arrow"></div></div>
 </section>
 
-<!-- ORIGINAL ANIMATION REFERENCE -->
+<!-- THREE-SHOW BOX -->
+<section class="block" id="three-show-box">
+  <div class="wrap reveal">
+    <div class="kicker">باکس اختصاصی جهانی انیمیشن در صحنه تئاتر</div>
+    <h2 class="title">سه جهان محبوب؛ یک قرارداد، یک سال همراهی</h2>
+    <p class="lead">اسپانسر اصلی در تمام مراحل معرفی، افتتاحیه، اجرای تهران، تولید محتوای رسانه‌ای و تور شهرستان‌های هر سه نمایش در کنار مجموعه خواهد بود.</p>
+
+    <div class="project-showcase">
+      <article class="project-showcase-card">
+        <div class="project-poster"><span class="project-status">پروژه موفق و آماده بازگشت</span><img src="assets/shiba/posters/hotel-transylvania.jpeg" alt="پوستر هتل ترانسیلوانیا شعبه در ایران" fetchpriority="high"></div>
+        <div class="project-card-copy">
+          <h3>هتل ترانسیلوانیا؛ شعبه در ایران</h3>
+          <p>پرفروش‌ترین نمایش تاریخ تئاتر کودک و نوجوان ایران؛ با حضور صداپیشگان اصلی انیمیشن و تجربه‌ی اجرای موفق در تهران و شهرهای مختلف.</p>
+          <p class="project-credit">نویسنده و کارگردان: امین گلستانه</p>
+        </div>
+      </article>
+      <article class="project-showcase-card">
+        <div class="project-poster"><span class="project-status">اقتباس ایرانیزه‌شده</span><img src="assets/shiba/posters/minions-secret-of-immortality.jpg" alt="پوستر مینیون‌ها راز جاودانگی" loading="lazy"></div>
+        <div class="project-card-copy">
+          <h3>مینیون‌ها؛ راز جاودانگی</h3>
+          <p>اقتباسی ایرانیزه‌شده از جهان «من شرور» و مینیون‌ها؛ یک نمایش فانتزی، کمدی و موزیکال با ظرفیت بالای ارتباط با کودک و خانواده.</p>
+          <p class="project-credit">نویسنده و کارگردان: فایزه کلبری<br>مشاور و تهیه‌کننده: امین گلستانه</p>
+        </div>
+      </article>
+      <article class="project-showcase-card">
+        <div class="project-poster"><span class="project-status production">در حال تولید</span><img src="assets/shiba/posters/insideout-lost-control.jpeg" alt="پوستر درون بیرون فرمان گمشده" loading="lazy"></div>
+        <div class="project-card-copy">
+          <h3>درون بیرون؛ فرمان گمشده</h3>
+          <p>نمایشی تازه در اتاق فرمان ذهن یک دختر ایرانی؛ با حضور صداپیشگان اصلی انیمیشن. حضور سه صداپیشه برای این پروژه قطعی شده است.</p>
+          <p class="project-credit">نویسنده و کارگردان: امین گلستانه<br>وضعیت: پیش‌تولید و آماده‌سازی برای اجرا</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="contract-band">
+      <div class="contract-kpi"><b>۳ نمایش</b><span>در قالب یک پکیج یکپارچه</span></div>
+      <div class="contract-kpi"><b>۱ سال</b><span>حضور پیوسته اسپانسر اصلی</span></div>
+      <div class="contract-kpi"><b>حداقل ۳۰۰ اجرا</b><span>مجموع اجراها بسته به کشش مخاطب متغیر است</span></div>
+      <div class="contract-kpi"><b>تهران + تور ایران</b><span>گسترش مرحله‌ای در بازارهای شهری</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ONE-YEAR EXECUTION PLAN -->
 <section class="block">
   <div class="wrap reveal">
-    <div class="kicker">جهان الهام‌بخش پروژه</div>
-    <div class="reference-layout">
-      <div class="reference-poster"><img src="assets/reference/inside-out-original-poster.jpg" alt="پوستر انیمیشن درون و بیرون" fetchpriority="high"></div>
-      <div class="reference-copy">
-        <h2 class="title">اگر هنوز وارد اتاق فرمان ذهن نشده‌اید</h2>
-        <div class="big-line">این پروژه از جهان تصویری و ایده شخصیت‌های احساسی انیمیشن محبوب <strong>Inside Out</strong> الهام می‌گیرد و آن را به یک داستان زنده، موزیکال و ایرانی روی صحنه تبدیل می‌کند.</div>
-        <p class="body-p">مخاطب برای همراه‌شدن با نمایش نیازی به دیدن انیمیشن ندارد؛ شخصیت‌ها و قواعد جهان داستان در دل اجرا معرفی می‌شوند. پوستر مقابل، مرجع آشنایی سریع با دنیای اصلی و شخصیت‌های شناخته‌شده آن است.</p>
-        <div class="reference-note">پوستر صرفاً به‌عنوان مرجع معرفی اثر الهام‌بخش نمایش ارائه شده است.</div>
-      </div>
+    <div class="kicker">برنامه‌ی اجرا و توسعه</div>
+    <h2 class="title">یک سال حضور پیوسته؛ از سالن شماره ۱ شهرزاد تا تور ایران</h2>
+    <p class="lead">این همکاری به یک اجرای مقطعی محدود نیست. سه پروژه در طول یک سال، به‌صورت مرحله‌ای در تهران و شهرستان‌ها روی صحنه می‌روند و اسپانسر اصلی در تمام نقاط تماس مخاطب حضور خواهد داشت.</p>
+    <div class="info-grid">
+      <div class="info-card"><div class="k">خانه اصلی اجرا</div><div class="v">پردیس تئاتر شهرزاد، سالن ۱</div></div>
+      <div class="info-card"><div class="k">افتتاحیه ویژه</div><div class="v">مراسم رونمایی درون بیرون</div></div>
+      <div class="info-card"><div class="k">تجربه حضوری برند</div><div class="v">استیج عکاسی اختصاصی</div></div>
+      <div class="info-card"><div class="k">حداقل برنامه اجرا</div><div class="v">۳۰۰ سانس در یک سال</div></div>
+      <div class="info-card"><div class="k">شهرهای هدف تور</div><div class="v">رشت، تبریز، قزوین، شیراز</div></div>
+      <div class="info-card"><div class="k">ادامه مسیر تور</div><div class="v">کرج، ساری، گرگان، مشهد</div></div>
     </div>
+    <p class="body-p" style="margin-top:24px">مجموع نهایی اجراها بر اساس کشش مخاطب، تمدیدهای تهران و ظرفیت هر شهر قابل افزایش است.</p>
   </div>
 </section>
 
@@ -598,7 +687,7 @@
         <div class="partner-logo-stage"><img src="assets/partners/shahrzad.png" alt="لوگوی پردیس تئاتر شهرزاد"></div>
         <h3>پردیس تئاتر شهرزاد</h3>
         <div class="partner-role">میزبان اجرای نمایش</div>
-        <p>سالن شماره ۲ پردیس تئاتر شهرزاد، خانه اجرای تهران و بستر اصلی تجربه زنده این پروژه است.</p>
+        <p>سالن شماره ۱ پردیس تئاتر شهرزاد، خانه اجرای تهران و بستر اصلی تجربه زنده این باکس سه‌نمایشی است.</p>
       </div>
       <div class="partner-card">
         <div class="partner-logo-stage"><img src="assets/partners/fidibo.svg" alt="لوگوی فیدیبو"></div>
@@ -721,32 +810,27 @@
   </div>
 </section>
 
-<!-- LEGACY / TRACK RECORD -->
+<!-- REAL PERFORMANCE GALLERY -->
 <section class="block">
   <div class="wrap reveal">
-    <div class="kicker">پشتوانه پروژه</div>
-    <h2 class="title">سومین گام یک مسیر آزموده‌شده</h2>
-    <p class="lead">فرمان گمشده روی سابقه دو نمایش پرمخاطب قبلی امین گلستانه ساخته می‌شود.</p>
-
-    <div class="legacy-grid">
-      <div class="legacy-card">
-        <h3>هتل ترانسیلوانیا؛ شعبه ایران</h3>
-        <div class="stat-row"><span>پرفروش‌ترین نمایش تاریخ تئاتر کودک ایران</span></div>
-        <div class="stat-row"><span>تعداد اجرا</span><b>بیش از ۱۵۰ سانس سولد اوت</b></div>
-        <div class="stat-row"><span>مخاطبان</span><b>۷۰ هزار نفر در سراسر ایران</b></div>
-        <div class="stat-row"><span>فروش ناخالص</span><b>۱۰ میلیارد تومان</b></div>
-        <div class="stat-row" style="border:none"><span>بازتاب رسانه‌ای</span><b>بیش از ۵۰ مصاحبه و گزارش، پوشش دویچه‌وله</b></div>
-        <a class="source-link" href="https://fa.wikipedia.org/wiki/%D9%87%D8%AA%D9%84_%D8%AA%D8%B1%D8%A7%D9%86%D8%B3%DB%8C%D9%84%D9%88%D8%A7%D9%86%DB%8C%D8%A7_%D8%B4%D8%B9%D8%A8%D9%87_%D8%AF%D8%B1_%D8%A7%DB%8C%D8%B1%D8%A7%D9%86" target="_blank" rel="noopener">صفحه نمایش «هتل ترانسیلوانیا؛ شعبه در ایران» در ویکی‌پدیا ↗</a>
-      </div>
-      <div class="legacy-card">
-        <h3>کارخانه هیولاها؛ سالیوان در ایران</h3>
-        <div class="stat-row"><span>تعداد اجرا</span><b>۷۰ سانس در ۲ دوره</b></div>
-        <div class="stat-row"><span>مخاطبان</span><b>۸ هزار نفر</b></div>
-        <div class="stat-row"><span>فروش ناخالص</span><b>۳٫۸ میلیارد تومان</b></div>
-        <div class="stat-row"><span>ظرفیت اشغال سالن</span><b>بالای ۷۵٪</b></div>
-        <div class="stat-row" style="border:none"><span>بازتاب</span><b>پوشش ۱۵ دقیقه‌ای شبکه خبر</b></div>
-        <a class="source-link" href="https://fa.wikipedia.org/wiki/%DA%A9%D8%A7%D8%B1%D8%AE%D8%A7%D9%86%D9%87_%D9%87%DB%8C%D9%88%D9%84%D8%A7%D9%87%D8%A7_%D8%B3%D8%A7%D9%84%DB%8C%D9%88%D8%A7%D9%86_%D8%AF%D8%B1_%D8%A7%DB%8C%D8%B1%D8%A7%D9%86" target="_blank" rel="noopener">صفحه نمایش «کارخانه هیولاها؛ سالیوان در ایران» در ویکی‌پدیا ↗</a>
-      </div>
+    <div class="kicker">پشتوانه‌ی اجرایی واقعی</div>
+    <h2 class="title">این جهان‌ها پیش از این، مخاطب خود را پیدا کرده‌اند</h2>
+    <p class="lead">تصاویر واقعی صحنه، لباس، طراحی و مقیاس تولید دو پروژه‌ی اجراشده؛ مستندی تصویری از توانایی تبدیل جهان انیمیشن به تجربه‌ی زنده‌ی تئاتری.</p>
+    <div class="gallery-label"><strong>هتل ترانسیلوانیا؛ شعبه در ایران</strong><span>منتخب اجرای زنده</span></div>
+    <div class="production-gallery">
+      <a class="wide" href="assets/shiba/hotel/RJ_02164-Enhanced-NR.jpg" target="_blank" rel="noopener"><img src="assets/shiba/hotel/RJ_02164-Enhanced-NR.jpg" alt="اجرای هتل ترانسیلوانیا" loading="lazy"></a>
+      <a href="assets/shiba/hotel/RJ_02258-Enhanced-NR.jpg" target="_blank" rel="noopener"><img src="assets/shiba/hotel/RJ_02258-Enhanced-NR.jpg" alt="اجرای هتل ترانسیلوانیا" loading="lazy"></a>
+      <a href="assets/shiba/hotel/RJ_02340-Enhanced-NR.jpg" target="_blank" rel="noopener"><img src="assets/shiba/hotel/RJ_02340-Enhanced-NR.jpg" alt="اجرای هتل ترانسیلوانیا" loading="lazy"></a>
+      <a href="assets/shiba/hotel/RJ_02422-Enhanced-NR.jpg" target="_blank" rel="noopener"><img src="assets/shiba/hotel/RJ_02422-Enhanced-NR.jpg" alt="اجرای هتل ترانسیلوانیا" loading="lazy"></a>
+      <a class="wide" href="assets/shiba/hotel/RJ_02492-Enhanced-NR.jpg" target="_blank" rel="noopener"><img src="assets/shiba/hotel/RJ_02492-Enhanced-NR.jpg" alt="اجرای هتل ترانسیلوانیا" loading="lazy"></a>
+    </div>
+    <div class="gallery-label" style="margin-top:40px"><strong>مینیون‌ها؛ راز جاودانگی</strong><span>منتخب اجرای زنده</span></div>
+    <div class="production-gallery">
+      <a class="tall" href="assets/shiba/minions/آلبوم-مینیون-ها_02.jpg" target="_blank" rel="noopener"><img src="assets/shiba/minions/آلبوم-مینیون-ها_02.jpg" alt="اجرای مینیون‌ها راز جاودانگی" loading="lazy"></a>
+      <a href="assets/shiba/minions/آلبوم-مینیون-ها_03.jpg" target="_blank" rel="noopener"><img src="assets/shiba/minions/آلبوم-مینیون-ها_03.jpg" alt="اجرای مینیون‌ها راز جاودانگی" loading="lazy"></a>
+      <a class="wide" href="assets/shiba/minions/آلبوم-مینیون-ها_05.jpg" target="_blank" rel="noopener"><img src="assets/shiba/minions/آلبوم-مینیون-ها_05.jpg" alt="اجرای مینیون‌ها راز جاودانگی" loading="lazy"></a>
+      <a href="assets/shiba/minions/آلبوم-مینیون-ها_06.jpg" target="_blank" rel="noopener"><img src="assets/shiba/minions/آلبوم-مینیون-ها_06.jpg" alt="اجرای مینیون‌ها راز جاودانگی" loading="lazy"></a>
+      <a href="assets/shiba/minions/آلبوم-مینیون-ها_08.jpg" target="_blank" rel="noopener"><img src="assets/shiba/minions/آلبوم-مینیون-ها_08.jpg" alt="اجرای مینیون‌ها راز جاودانگی" loading="lazy"></a>
     </div>
   </div>
 </section>
@@ -927,68 +1011,47 @@
   </div>
 </section>
 
-<!-- SPONSORSHIP PACKAGES -->
+<!-- MASTER SPONSORSHIP PACKAGE -->
 <section class="block">
   <div class="wrap reveal">
-    <div class="kicker">بسته‌های اسپانسرینگ</div>
-    <h2 class="title">سه سطح همکاری برای برندها</h2>
-    <p class="lead">فرصتی برای حضور هدفمند برند در تجربه‌ای خانوادگی، فرهنگی و سرگرم‌کننده — نه فقط درج یک لوگو.</p>
+    <div class="kicker">پکیج انحصاری همکاری</div>
+    <h2 class="title">یک اسپانسر اصلی؛ سه نمایش، یک سال حضور مداوم</h2>
+    <p class="lead">این پیشنهاد برای برندی طراحی شده که می‌خواهد مالکیت ارتباطی قدرتمندی در حوزه‌ی خانواده، فرهنگ و سرگرمی داشته باشد؛ نه یک لوگوی موقت روی یک پوستر.</p>
 
     <div class="sponsor-brief">
       <strong>ماهیت همکاری با حامی مالی</strong>
-      <p>مبالغ این بسته‌ها در ازای مجموعه‌ای از خدمات تبلیغاتی، رسانه‌ای و فرصت‌های دیده‌شدن برند پرداخت می‌شوند؛ این همکاری سرمایه‌گذاری، مشارکت در فروش یا تسهیلات قابل‌استرداد نیست و وجهی به اسپانسر بازگردانده نمی‌شود. دامنه دقیق خدمات و جایگاه‌های تبلیغاتی هر برند در قرارداد نهایی مشخص خواهد شد.</p>
+      <p>مبلغ این پکیج در ازای مجموعه‌ای یکپارچه از خدمات تبلیغاتی، رسانه‌ای و فرصت‌های دیده‌شدن برند در سه نمایش و تور یک‌ساله پرداخت می‌شود. این همکاری سرمایه‌گذاری، مشارکت در فروش یا تسهیلات قابل‌استرداد نیست و دامنه‌ی دقیق خدمات در قرارداد نهایی مشخص خواهد شد.</p>
     </div>
 
-    <div class="pkg-grid">
-      <div class="pkg-card gold">
-        <div class="pkg-label">بسته طلایی</div>
-        <h3>حامی اصلی</h3>
-        <div class="price">۱۰٬۰۰۰٬۰۰۰٬۰۰۰ تومان</div>
-        <ul>
-          <li>عنوان «حامی اصلی نمایش»</li>
-          <li>حضور در تهران و تمام شهرهای تور</li>
-          <li>استرابورد در سطح شهر تهران (تبلیغات محیطی)</li>
-          <li>برندینگ اصلی استیج عکاسی</li>
-          <li>تا ۴ محتوای ویدئویی مشترک اختصاصی</li>
-          <li>پوش‌نوتیفیکیشن برای ۱۲ میلیون کاربر در اپلیکیشن فیدیبو</li>
-          <li>حداقل ۱۰ میلیون بازدید رسانه‌ای و فضای مجازی</li>
-          <li>صفحه اختصاصی خرید بلیت با لوگوی اسپانسر</li>
-          <li>درج لوگوی اسپانسر ویژه روی بلیت‌ها</li>
-          <li>۳۰۰ بلیت سازمانی</li>
-          <li>گزارش تفصیلی کامل کمپین</li>
-        </ul>
+    <div class="master-package">
+      <div class="package-head">
+        <div>
+          <h3>حامی اصلی باکس جهانی انیمیشن روی صحنه</h3>
+          <p>حضور یکپارچه در «هتل ترانسیلوانیا؛ شعبه در ایران»، «مینیون‌ها؛ راز جاودانگی» و «درون بیرون؛ فرمان گمشده» در تهران و تور ایران.</p>
+        </div>
+        <div class="package-price"><b>۲۰ میلیارد</b><span>تومان — قرارداد یک‌ساله</span></div>
       </div>
-      <div class="pkg-card silver">
-        <div class="pkg-label">بسته نقره‌ای</div>
-        <h3>حامی ویژه تهران</h3>
-        <div class="price">۵٬۰۰۰٬۰۰۰٬۰۰۰ تومان</div>
-        <ul>
-          <li>عنوان «حامی ویژه نمایش»</li>
-          <li>لوگو در پوستر، وب‌سایت و بک‌دراپ افتتاحیه</li>
-          <li>استرابورد در سطح شهر تهران (تبلیغات محیطی)</li>
-          <li>حداقل ۲ میلیون بازدید رسانه‌ای و فضای مجازی</li>
-          <li>جایگاه ثانویه در استیج عکاسی</li>
-          <li>تا ۲ محتوای مشترک</li>
-          <li>۱۰۰ بلیت سازمانی</li>
-          <li>حضور در تور با توافق جداگانه</li>
-        </ul>
+      <div class="benefit-grid">
+        <div class="benefit-item">عنوان «اسپانسر اصلی باکس سه‌نمایشی» در ارتباطات رسمی</div>
+        <div class="benefit-item">حضور برند در حداقل ۳۰۰ اجرا طی یک سال</div>
+        <div class="benefit-item">برندینگ هر سه نمایش در تهران و تمام شهرهای تور</div>
+        <div class="benefit-item">لوگو در پوسترها، تیزرها، وب‌سایت و اقلام رسمی سه پروژه</div>
+        <div class="benefit-item">برندینگ اصلی مراسم افتتاحیه «درون بیرون؛ فرمان گمشده»</div>
+        <div class="benefit-item">استیج عکاسی اختصاصی با هویت مشترک برند و پروژه</div>
+        <div class="benefit-item">استرابورد و تبلیغات محیطی در سطح شهر تهران</div>
+        <div class="benefit-item">پوش‌نوتیفیکیشن برای ۱۲ میلیون کاربر اپلیکیشن فیدیبو</div>
+        <div class="benefit-item">حداقل ۱۰ میلیون بازدید رسانه‌ای و فضای مجازی</div>
+        <div class="benefit-item">صفحه خرید بلیت با لوگو و جایگاه ویژه اسپانسر</div>
+        <div class="benefit-item">درج لوگوی اسپانسر روی بلیت‌های هر سه نمایش</div>
+        <div class="benefit-item">تولید محتوای ویدئویی مشترک و اختصاصی برای کمپین</div>
+        <div class="benefit-item">امکان فعال‌سازی برند در فضای سالن و تعامل با خانواده‌ها</div>
+        <div class="benefit-item">سهمیه بلیت سازمانی و دعوت مهمانان ویژه با برنامه‌ریزی مشترک</div>
+        <div class="benefit-item">پوشش رسانه‌ای افتتاحیه، پشت صحنه، صداپیشگان و تور شهرها</div>
+        <div class="benefit-item">گزارش تفصیلی عملکرد رسانه‌ای و خروجی کمپین در پایان دوره</div>
       </div>
-      <div class="pkg-card bronze">
-        <div class="pkg-label">بسته برنزی</div>
-        <h3>حامی همراه</h3>
-        <div class="price">۲٬۰۰۰٬۰۰۰٬۰۰۰ تومان</div>
-        <ul>
-          <li>عنوان «حامی همراه»</li>
-          <li>لوگو در صفحه حامیان وب‌سایت و بک‌دراپ مشترک</li>
-          <li>استرابورد در سطح شهر تهران (تبلیغات محیطی)</li>
-          <li>استند در فضای سالن</li>
-          <li>دعوت به افتتاحیه</li>
-          <li>۳۰ بلیت سازمانی</li>
-          <li>گزارش کلی پایان دوره اجرا</li>
-        </ul>
-      </div>
+      <div class="custom-design-note"><strong>ظرفیت طراحی اختصاصی‌تر:</strong> طراحی بازی‌های محیطی و رسانه‌ای، کمپین‌های گیمیفیکیشن و فعال‌سازی‌های ویژه‌ی متناسب با محصول و اهداف برند، در جلسه‌ی حضوری قابل طراحی و توسعه است.</div>
     </div>
-    <p class="body-p" style="margin-top:28px">پرداخت هر بسته در سه مرحله انجام می‌شود: ۷۰٪ هم‌زمان با عقد قرارداد، ۲۰٪ حداکثر ۱۰ روز پیش از افتتاحیه، و ۱۰٪ حداکثر ۷ روز پس از افتتاحیه.</p>
+    <p class="body-p" style="margin-top:28px">مدل پرداخت، تقویم تحویل خدمات و جزئیات هر فعال‌سازی بر اساس برنامه‌ی نهایی اجراها و پس از جلسه‌ی حضوری در قرارداد تنظیم می‌شود.</p>
   </div>
 </section>
 
@@ -1050,7 +1113,7 @@
     <img class="fidibo" src="assets/partners/footer/fidibo-white.png" alt="فیدیبو" draggable="false">
     <img src="assets/partners/footer/digikala-white.png" alt="دیجی‌کالا" draggable="false">
   </div>
-  <div class="footer-copy">درون بیرون: فرمان گمشده — خلاصه اختصاصی برای شرکای تجاری</div>
+  <div class="footer-copy">باکس جهانی انیمیشن روی صحنه — پیشنهاد اختصاصی همکاری یک‌ساله</div>
 </footer>
 
 <script>
@@ -1147,6 +1210,20 @@
   en.set('تهران — ۱۲۵ سانس','TEHRAN — 125 PERFORMANCES');en.set('کرج — ۱۲ سانس','KARAJ — 12 PERFORMANCES');en.set('کرمانشاه — ۴ سانس','KERMANSHAH — 4 PERFORMANCES');en.set('شیراز — ۱۲ سانس','SHIRAZ — 12 PERFORMANCES');en.set('زنجان — ۲ سانس','ZANJAN — 2 PERFORMANCES');en.set('آمل — ۲ سانس','AMOL — 2 PERFORMANCES');en.set('ساری — ۸ سانس','SARI — 8 PERFORMANCES');
   en.set('هتل ترانسیلوانیا و کارخانه هیولاها','HOTEL TRANSYLVANIA & MONSTERS, INC.');en.set('هتل ترانسیلوانیا','HOTEL TRANSYLVANIA');en.set('پردیس تئاتر شهرزاد، سالن شماره ۱','SHAHRZAD THEATRE COMPLEX, HALL 1');en.set('سالن اصلی اکومال و سالن اصلاح بذر','ECOMALL MAIN HALL & ESLĀH-E BAZR HALL');en.set('سالن قائم','GHAEM HALL');en.set('تالار احسان؛ اجرا در دو تاریخ','EHSAN HALL; TWO PERFORMANCE PERIODS');en.set('سالن هلال احمر','RED CRESCENT HALL');en.set('سالن اریکه آریایی','ARIKEH ARIAEI HALL');en.set('تالار مرکزی','CENTRAL HALL');en.set('۸۰٪ ظرفیت سالن','80% OCCUPANCY');
   en.set('گرگان','GORGAN');en.set('کرمانشاه','KERMANSHAH');en.set('زنجان','ZANJAN');en.set('آمل','AMOL');en.set('کاشان','KASHAN');en.set('قزوین','QAZVIN');en.set('رشت','RASHT');en.set('نقشه دقیق استان‌های ایران','DETAILED MAP OF IRANIAN PROVINCES');
+  en.set('پروپوزال همکاری اختصاصی یک‌ساله  •  کمپانی نمایشی دیوولی','ONE-YEAR EXCLUSIVE PARTNERSHIP PROPOSAL  •  DIVOOLEE THEATRE COMPANY');
+  en.set('جهان انیمیشن‌ها','ANIMATED WORLDS');en.set('روی صحنه تئاتر','LIVE ON THEATRE STAGE');
+  en.set('سه نمایش موزیکال، یک هویت مشترک و حداقل ۳۰۰ اجرا در تهران و تور ایران؛ یک باکس اختصاصی برای خانواده‌هایی که می‌خواهند جهان محبوب انیمیشن را زنده روی صحنه تجربه کنند.','Three musical productions, one shared identity and at least 300 performances across Tehran and the national tour—a dedicated box for families to experience beloved animated worlds live on stage.');
+  en.set('پردیس تئاتر شهرزاد — سالن شماره ۱','SHAHRZAD THEATRE COMPLEX — HALL 1');
+  en.set('باکس اختصاصی جهانی انیمیشن در صحنه تئاتر','EXCLUSIVE ANIMATED-WORLDS THEATRE BOX');
+  en.set('سه جهان محبوب؛ یک قرارداد، یک سال همراهی','THREE BELOVED WORLDS; ONE CONTRACT, ONE YEAR TOGETHER');
+  en.set('اسپانسر اصلی در تمام مراحل معرفی، افتتاحیه، اجرای تهران، تولید محتوای رسانه‌ای و تور شهرستان‌های هر سه نمایش در کنار مجموعه خواهد بود.','The main sponsor remains present throughout the launch, premiere, Tehran run, media production and national touring of all three shows.');
+  en.set('هتل ترانسیلوانیا؛ شعبه در ایران','HOTEL TRANSYLVANIA: IRAN BRANCH');en.set('مینیون‌ها؛ راز جاودانگی','MINIONS: THE SECRET OF IMMORTALITY');en.set('درون بیرون؛ فرمان گمشده','INSIDE OUT: THE LOST CONTROL');
+  en.set('پروژه موفق و آماده بازگشت','PROVEN PRODUCTION — READY TO RETURN');en.set('اقتباس ایرانیزه‌شده','IRANIAN ADAPTATION');en.set('در حال تولید','IN PRODUCTION');
+  en.set('نویسنده و کارگردان: فایزه کلبری','WRITER & DIRECTOR: FAEZEH KALBARI');en.set('مشاور و تهیه‌کننده: امین گلستانه','CONSULTANT & PRODUCER: AMIN GOLESTANEH');
+  en.set('۳ نمایش','3 SHOWS');en.set('در قالب یک پکیج یکپارچه','IN ONE INTEGRATED PACKAGE');en.set('۱ سال','1 YEAR');en.set('حضور پیوسته اسپانسر اصلی','CONTINUOUS MAIN-SPONSOR PRESENCE');en.set('حداقل ۳۰۰ اجرا','AT LEAST 300 PERFORMANCES');en.set('مجموع اجراها بسته به کشش مخاطب متغیر است','TOTAL RUN MAY GROW WITH AUDIENCE DEMAND');en.set('تهران + تور ایران','TEHRAN + NATIONAL TOUR');en.set('گسترش مرحله‌ای در بازارهای شهری','PHASED EXPANSION ACROSS CITY MARKETS');
+  en.set('پکیج انحصاری همکاری','EXCLUSIVE PARTNERSHIP PACKAGE');en.set('یک اسپانسر اصلی؛ سه نمایش، یک سال حضور مداوم','ONE MAIN SPONSOR; THREE SHOWS, ONE YEAR OF CONTINUOUS PRESENCE');
+  en.set('حامی اصلی باکس جهانی انیمیشن روی صحنه','MAIN SPONSOR OF THE ANIMATED WORLDS ON STAGE BOX');en.set('۲۰ میلیارد','20 BILLION');en.set('تومان — قرارداد یک‌ساله','TOMANS — ONE-YEAR CONTRACT');
+  en.set('ظرفیت طراحی اختصاصی‌تر:','TAILORED CREATIVE OPPORTUNITIES:');en.set('باکس جهانی انیمیشن روی صحنه — پیشنهاد اختصاصی همکاری یک‌ساله','ANIMATED WORLDS ON STAGE — EXCLUSIVE ONE-YEAR PARTNERSHIP PROPOSAL');
 
   // Interactive Iran map: zoom with controls or wheel, pan with mouse/touch.
   const iranMapViewport=document.getElementById('iran-map-viewport');
@@ -1258,7 +1335,7 @@
     const english=lang==='en';
     document.documentElement.lang=english?'en':'fa';
     document.documentElement.dir=english?'ltr':'rtl';
-    document.title=english?'Inside Out: The Lost Control':'درون بیرون: فرمان گمشده';
+    document.title=english?'Animated Worlds on Stage — One-Year Partnership':'باکس جهانی انیمیشن روی صحنه | پیشنهاد همکاری یک‌ساله';
     textNodes.forEach(({node,fa})=>{
       const trimmed=fa.trim(); const translated=en.get(trimmed);
       node.nodeValue=english && translated ? fa.replace(trimmed,translated) : fa;
